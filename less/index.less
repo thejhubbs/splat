@@ -1,0 +1,272 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+
+/* ========================================= 
+DESIGN STYLES
+===========================================*/
+//Colors
+@main-color: rgb(200, 100, 100);
+@secondary-color: rgb(200, 200, 80);
+@highlight-color: rgb(255, 0, 0);
+
+@dark-color: rgb(45, 0, 0);
+@light-color: rgb(255, 230, 230);
+@grey-color: rgb(155, 100, 100);
+
+@transparent-dark: rgba(45, 0, 0, .7);
+
+//Other
+@default-border-radius: 8px;
+
+html { background-color: @main-color; }
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 5px 0 15px;
+	color: @dark-color;
+}
+
+// Text margins & sizes
+h1 {font-size: 40px; color: @highlight-color; }
+h2 {font-size: 34px; color: @secondary-color;}
+h3 {font-size: 28px; color: @main-color;}
+h4 {font-size: 22px;}
+h5 {font-size: 16px;}
+h6 {font-size: 10px;}
+p {font-size: 16px;}
+
+a {color:@main-color;text-decoration:none;}
+a:visited {color:@main-color;}
+a:hover {color:@highlight-color;}
+
+.light-color {color:@light-color}
+.dark-color {color:@dark-color}
+
+
+.button {
+	width: 100%;
+	margin: 10px 0;
+	@media screen and (min-width: 800px) {
+		width:150px; 
+		margin: 5px;
+	}
+	padding: 15px;
+	border-radius: @default-border-radius;
+	border:none;
+}
+
+.default-button {
+	.button;
+	color: @dark-color;
+	background-color:@light-color;
+}
+
+.primary-button {
+	.button;
+	color: @light-color;
+	background-color:@main-color;
+}
+
+
+
+/* ========================================= 
+Responsive boxes & rows
+===========================================*/
+.page-wrapper {
+	.container;
+	margin: auto;
+	height:auto;
+	background-color: @light-color;
+	@media screen and (min-width: 800px) { width: 800px; }
+	
+}
+
+.page-section {
+	border-bottom: 1px solid @dark-color;
+	margin-bottom: 50px;
+	padding-bottom: 25px;
+}
+
+.mobile-page-section {@media screen and (max-width: 500px) {.page-section;}}
+.tablet-page-section {@media screen and (min-width: 500px) {.page-section;}}
+.desktop-page-section {@media screen and (min-width: 800px) {.page-section;}}
+
+//Default keys
+.container { padding: 10px; width: 100%; height: 100%;}
+.row { .wrap-flex; }
+
+//DEFAULT BOXES
+.box-12 {width:100%;}
+.box-10 {width:83%}
+.box-9 {width:75%;}
+.box-8 {width:66%;}
+.box-6 {width:50%;}
+.box-4 {width:33%;}
+.box-3 {width:25%;}
+.box-2 {width:17%;}
+
+//TARGET SIZES
+.box-mobile-12 {@media screen and (max-width:500px) {.box-12} }
+
+.box-tablet-6 {@media screen and (min-width: 500px) {.box-6}}
+.box-tablet-4 {@media screen and (min-width: 500px) {.box-4}}
+
+.box-desktop-6 {@media screen and (min-width: 800px) {.box-6}}
+.box-desktop-4 {@media screen and (min-width: 800px) {.box-4}}
+
+//TARGET HIDDEN
+.mobile-hidden {@media screen and (max-width: 500px) {display:none;} }
+.tablet-hidden {@media screen and (min-width: 500px) {display:none;} }
+.desktop-hidden {@media screen and (min-width: 800px) {display:none;} }
+
+
+
+
+
+
+/* ========================================= 
+CSS Functions for ease of writing
+===========================================*/
+.inline-flex {
+	//For displaying all children on the same line and aligning vertically
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.wrap-flex {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	align-content: space-around;
+	flex-wrap: wrap;
+}
+.abs-center-flex{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.center-text {
+	text-align: center;
+}
+
+
+
+
+
+
+
+/* ========================================= 
+SPECIFIC OBJECTS
+===========================================*/
+#top-nav {
+	.inline-flex;
+	//Fix menu bar to top if > tablet
+	@media screen and (min-width:500px) {position: fixed;}
+	width: 100%;
+	background-color: @light-color;
+
+	ul{
+		.wrap-flex;
+		text-align: center;
+		//change to inline flex if > tablet
+		@media screen and (min-width:500px) {.inline-flex;}
+		li {
+			width:100%; 
+			//only make 100px if > tablet
+			@media screen and (min-width:500px){width: 100px;}
+			a {
+				display: block;
+				padding: 25px;
+				width: 100%;
+			}
+		}
+	}
+}
+
+.main-screen {
+	.abs-center-flex;
+	height: 100vh;
+	background: url("../img/bg.jpg");
+	background-size: cover;
+}
+
+.image-text-overlay-center {
+	.abs-center-flex;
+	background-color: @transparent-dark;
+	border-radius: @default-border-radius;
+	width:100%;
+	height:100%;
+
+	@media screen and (min-width: 500px) {
+		height: auto; 
+		width:80%; 
+		margin: auto; 
+		padding: 25px;
+	} 
+	@media screen and (min-width: 800px) {
+		width: 800px; 
+	} 
+
+
+}
+
+
+
+

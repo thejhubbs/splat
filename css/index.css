@@ -1,0 +1,452 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/* ========================================= 
+DESIGN STYLES
+===========================================*/
+html {
+  background-color: #c86464;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 5px 0 15px;
+  color: #2d0000;
+}
+h1 {
+  font-size: 40px;
+  color: #ff0000;
+}
+h2 {
+  font-size: 34px;
+  color: #c8c850;
+}
+h3 {
+  font-size: 28px;
+  color: #c86464;
+}
+h4 {
+  font-size: 22px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 10px;
+}
+p {
+  font-size: 16px;
+}
+a {
+  color: #c86464;
+  text-decoration: none;
+}
+a:visited {
+  color: #c86464;
+}
+a:hover {
+  color: #ff0000;
+}
+.light-color {
+  color: #ffe6e6;
+}
+.dark-color {
+  color: #2d0000;
+}
+.button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+}
+@media screen and (min-width: 800px) {
+  .button {
+    width: 150px;
+    margin: 5px;
+  }
+}
+.default-button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  color: #2d0000;
+  background-color: #ffe6e6;
+}
+@media screen and (min-width: 800px) {
+  .default-button {
+    width: 150px;
+    margin: 5px;
+  }
+}
+.primary-button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  color: #ffe6e6;
+  background-color: #c86464;
+}
+@media screen and (min-width: 800px) {
+  .primary-button {
+    width: 150px;
+    margin: 5px;
+  }
+}
+/* ========================================= 
+Responsive boxes & rows
+===========================================*/
+.page-wrapper {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  height: auto;
+  background-color: #ffe6e6;
+}
+@media screen and (min-width: 800px) {
+  .page-wrapper {
+    width: 800px;
+  }
+}
+.page-section {
+  border-bottom: 1px solid #2d0000;
+  margin-bottom: 50px;
+  padding-bottom: 25px;
+}
+@media screen and (max-width: 500px) {
+  .mobile-page-section {
+    border-bottom: 1px solid #2d0000;
+    margin-bottom: 50px;
+    padding-bottom: 25px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .tablet-page-section {
+    border-bottom: 1px solid #2d0000;
+    margin-bottom: 50px;
+    padding-bottom: 25px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .desktop-page-section {
+    border-bottom: 1px solid #2d0000;
+    margin-bottom: 50px;
+    padding-bottom: 25px;
+  }
+}
+.container {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+.box-12 {
+  width: 100%;
+}
+.box-10 {
+  width: 83%;
+}
+.box-9 {
+  width: 75%;
+}
+.box-8 {
+  width: 66%;
+}
+.box-6 {
+  width: 50%;
+}
+.box-4 {
+  width: 33%;
+}
+.box-3 {
+  width: 25%;
+}
+.box-2 {
+  width: 17%;
+}
+@media screen and (max-width: 500px) {
+  .box-mobile-12 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 500px) {
+  .box-tablet-6 {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 500px) {
+  .box-tablet-4 {
+    width: 33%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .box-desktop-6 {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .box-desktop-4 {
+    width: 33%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .mobile-hidden {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) {
+  .tablet-hidden {
+    display: none;
+  }
+}
+@media screen and (min-width: 800px) {
+  .desktop-hidden {
+    display: none;
+  }
+}
+/* ========================================= 
+CSS Functions for ease of writing
+===========================================*/
+.inline-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrap-flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+.abs-center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.center-text {
+  text-align: center;
+}
+/* ========================================= 
+SPECIFIC OBJECTS
+===========================================*/
+#top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #ffe6e6;
+}
+@media screen and (min-width: 500px) {
+  #top-nav {
+    position: fixed;
+  }
+}
+#top-nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  align-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+}
+@media screen and (min-width: 500px) {
+  #top-nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+#top-nav ul li {
+  width: 100%;
+}
+@media screen and (min-width: 500px) {
+  #top-nav ul li {
+    width: 100px;
+  }
+}
+#top-nav ul li a {
+  display: block;
+  padding: 25px;
+  width: 100%;
+}
+.main-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  background: url("../img/bg.jpg");
+  background-size: cover;
+}
+.image-text-overlay-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(45, 0, 0, 0.7);
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 500px) {
+  .image-text-overlay-center {
+    height: auto;
+    width: 80%;
+    margin: auto;
+    padding: 25px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .image-text-overlay-center {
+    width: 800px;
+  }
+}
