@@ -135,44 +135,64 @@ body {
   height: 100%;
 }
 /* ========================================= 
-DESIGN STYLES
+Quick Style Options
+Use this top section to quickly edit colors
+and other style settings across the site.
+===========================================*/
+/* ========================================= 
+COMPLETE COLORS SET
 ===========================================*/
 html {
   background-color: #c86464;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 5px 0 15px;
-  color: #2d0000;
-}
 h1 {
-  font-size: 40px;
-  color: #ff0000;
+  font-family: "Comic Sans";
+  font-size: 4em;
+  color: #ff0050;
+  margin: 5px 0 15px;
+  line-height: 1;
 }
 h2 {
-  font-size: 34px;
+  font-family: "Comic Sans";
+  font-size: 3em;
   color: #c8c850;
+  margin: 5px 0 15px;
+  line-height: 1;
 }
 h3 {
-  font-size: 28px;
-  color: #c86464;
+  font-family: "Times New Roman";
+  font-size: 2em;
+  color: #ff0050;
+  margin: 5px 0 15px;
+  line-height: 1;
 }
 h4 {
-  font-size: 22px;
+  font-family: "Times New Roman";
+  font-size: 1.5em;
+  color: #c8c850;
+  margin: 5px 0 15px;
+  line-height: 1;
 }
 h5 {
-  font-size: 16px;
+  font-family: "Times New Roman";
+  font-size: 1em;
+  color: #3d2323;
+  margin: 5px 0 15px;
+  line-height: 1;
 }
 h6 {
-  font-size: 10px;
+  font-family: "Times New Roman";
+  font-size: 0.8em;
+  color: #c8c850;
+  margin: 5px 0 15px;
+  line-height: 1;
 }
 p {
-  font-size: 16px;
+  font-family: "Arial";
+  font-size: 1em;
+  color: #3d2323;
+  margin: 5px 0 15px;
+  line-height: 1.5;
 }
 a {
   color: #c86464;
@@ -182,13 +202,7 @@ a:visited {
   color: #c86464;
 }
 a:hover {
-  color: #ff0000;
-}
-.light-color {
-  color: #ffe6e6;
-}
-.dark-color {
-  color: #2d0000;
+  color: #ff0050;
 }
 .button {
   width: 100%;
@@ -209,8 +223,8 @@ a:hover {
   padding: 15px;
   border-radius: 8px;
   border: none;
-  color: #2d0000;
-  background-color: #ffe6e6;
+  color: #3d2323;
+  background-color: #fdfbfb;
 }
 @media screen and (min-width: 800px) {
   .default-button {
@@ -224,7 +238,7 @@ a:hover {
   padding: 15px;
   border-radius: 8px;
   border: none;
-  color: #ffe6e6;
+  color: #fdfbfb;
   background-color: #c86464;
 }
 @media screen and (min-width: 800px) {
@@ -233,123 +247,11 @@ a:hover {
     margin: 5px;
   }
 }
-/* ========================================= 
-Responsive boxes & rows
-===========================================*/
-.page-wrapper {
-  padding: 10px;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  height: auto;
-  background-color: #ffe6e6;
+.light-color {
+  color: #fdfbfb;
 }
-@media screen and (min-width: 800px) {
-  .page-wrapper {
-    width: 800px;
-  }
-}
-.page-section {
-  border-bottom: 1px solid #2d0000;
-  margin-bottom: 50px;
-  padding-bottom: 25px;
-}
-@media screen and (max-width: 500px) {
-  .mobile-page-section {
-    border-bottom: 1px solid #2d0000;
-    margin-bottom: 50px;
-    padding-bottom: 25px;
-  }
-}
-@media screen and (min-width: 500px) {
-  .tablet-page-section {
-    border-bottom: 1px solid #2d0000;
-    margin-bottom: 50px;
-    padding-bottom: 25px;
-  }
-}
-@media screen and (min-width: 800px) {
-  .desktop-page-section {
-    border-bottom: 1px solid #2d0000;
-    margin-bottom: 50px;
-    padding-bottom: 25px;
-  }
-}
-.container {
-  padding: 10px;
-  width: 100%;
-  height: 100%;
-}
-.row {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  align-content: space-around;
-  flex-wrap: wrap;
-}
-.box-12 {
-  width: 100%;
-}
-.box-10 {
-  width: 83%;
-}
-.box-9 {
-  width: 75%;
-}
-.box-8 {
-  width: 66%;
-}
-.box-6 {
-  width: 50%;
-}
-.box-4 {
-  width: 33%;
-}
-.box-3 {
-  width: 25%;
-}
-.box-2 {
-  width: 17%;
-}
-@media screen and (max-width: 500px) {
-  .box-mobile-12 {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 500px) {
-  .box-tablet-6 {
-    width: 50%;
-  }
-}
-@media screen and (min-width: 500px) {
-  .box-tablet-4 {
-    width: 33%;
-  }
-}
-@media screen and (min-width: 800px) {
-  .box-desktop-6 {
-    width: 50%;
-  }
-}
-@media screen and (min-width: 800px) {
-  .box-desktop-4 {
-    width: 33%;
-  }
-}
-@media screen and (max-width: 500px) {
-  .mobile-hidden {
-    display: none;
-  }
-}
-@media screen and (min-width: 500px) {
-  .tablet-hidden {
-    display: none;
-  }
-}
-@media screen and (min-width: 800px) {
-  .desktop-hidden {
-    display: none;
-  }
+.dark-color {
+  color: #3d2323;
 }
 /* ========================================= 
 CSS Functions for ease of writing
@@ -376,14 +278,305 @@ CSS Functions for ease of writing
   text-align: center;
 }
 /* ========================================= 
+Responsive boxes & rows
+===========================================*/
+.page-wrapper {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  height: auto;
+  background-color: #fdfbfb;
+}
+@media screen and (min-width: 800px) {
+  .page-wrapper {
+    width: 800px;
+  }
+}
+.page-section {
+  border-bottom: 1px solid #3d2323;
+  margin-bottom: 20px;
+  padding-bottom: 25px;
+}
+@media screen and (max-width: 500px) {
+  .mobile-page-section {
+    border-bottom: 1px solid #3d2323;
+    margin-bottom: 20px;
+    padding-bottom: 25px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .tablet-page-section {
+    border-bottom: 1px solid #3d2323;
+    margin-bottom: 20px;
+    padding-bottom: 25px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .desktop-page-section {
+    border-bottom: 1px solid #3d2323;
+    margin-bottom: 20px;
+    padding-bottom: 25px;
+  }
+}
+.container {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+.box-12 {
+  width: 100%;
+}
+@media screen and (max-width: 500px) {
+  .box-mobile-12 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 500px) {
+  .box-tablet-12 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .box-desktop-12 {
+    width: 100%;
+  }
+}
+.box-11 {
+  width: 91%;
+}
+@media screen and (max-width: 500px) {
+  .box-mobile-11 {
+    width: 91%;
+  }
+}
+@media screen and (min-width: 500px) {
+  .box-tablet-11 {
+    width: 91%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .box-desktop-11 {
+    width: 91%;
+  }
+}
+.box-10 {
+  width: 83%;
+}
+@media screen and (max-width: 500px) {
+  .box-mobile-10 {
+    width: 83%;
+  }
+}
+@media screen and (min-width: 500px) {
+  .box-tablet-10 {
+    width: 83%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .box-desktop-10 {
+    width: 83%;
+  }
+}
+.box-9 {
+  width: 75%;
+}
+@media screen and (max-width: 500px) {
+  .box-mobile-9 {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 500px) {
+  .box-tablet-9 {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .box-desktop-9 {
+    width: 75%;
+  }
+}
+.box-8 {
+  width: 66%;
+}
+@media screen and (max-width: 500px) {
+  .box-mobile-8 {
+    width: 66%;
+  }
+}
+@media screen and (min-width: 500px) {
+  .box-tablet-8 {
+    width: 66%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .box-desktop-8 {
+    width: 66%;
+  }
+}
+.box-7 {
+  width: 58%;
+}
+@media screen and (max-width: 500px) {
+  .box-mobile-7 {
+    width: 58%;
+  }
+}
+@media screen and (min-width: 500px) {
+  .box-tablet-7 {
+    width: 58%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .box-desktop-7 {
+    width: 58%;
+  }
+}
+.box-6 {
+  width: 50%;
+}
+@media screen and (max-width: 500px) {
+  .box-mobile-6 {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 500px) {
+  .box-tablet-6 {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .box-desktop-6 {
+    width: 50%;
+  }
+}
+.box-5 {
+  width: 41%;
+}
+@media screen and (max-width: 500px) {
+  .box-mobile-5 {
+    width: 41%;
+  }
+}
+@media screen and (min-width: 500px) {
+  .box-tablet-5 {
+    width: 41%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .box-desktop-5 {
+    width: 41%;
+  }
+}
+.box-4 {
+  width: 33%;
+}
+@media screen and (max-width: 500px) {
+  .box-mobile-4 {
+    width: 33%;
+  }
+}
+@media screen and (min-width: 500px) {
+  .box-tablet-4 {
+    width: 33%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .box-desktop-4 {
+    width: 33%;
+  }
+}
+.box-3 {
+  width: 25%;
+}
+@media screen and (max-width: 500px) {
+  .box-mobile-3 {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 500px) {
+  .box-tablet-3 {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .box-desktop-3 {
+    width: 25%;
+  }
+}
+.box-2 {
+  width: 16%;
+}
+@media screen and (max-width: 500px) {
+  .box-mobile-2 {
+    width: 16%;
+  }
+}
+@media screen and (min-width: 500px) {
+  .box-tablet-2 {
+    width: 16%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .box-desktop-2 {
+    width: 16%;
+  }
+}
+.box-1 {
+  width: 8%;
+}
+@media screen and (max-width: 500px) {
+  .box-mobile-1 {
+    width: 8%;
+  }
+}
+@media screen and (min-width: 500px) {
+  .box-tablet-1 {
+    width: 8%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .box-desktop-1 {
+    width: 8%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .mobile-hidden {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) {
+  .tablet-hidden {
+    display: none;
+  }
+}
+@media screen and (min-width: 800px) {
+  .desktop-hidden {
+    display: none;
+  }
+}
+/* ========================================= 
 SPECIFIC OBJECTS
 ===========================================*/
+/*
+Top-nav
+//------------------------------
+Sticky nav bar for desktop and tablet
+Collapseable for mobile. 
+*/
 #top-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: #ffe6e6;
+  background-color: #fdfbfb;
 }
 @media screen and (min-width: 500px) {
   #top-nav {
@@ -410,12 +603,12 @@ SPECIFIC OBJECTS
 }
 @media screen and (min-width: 500px) {
   #top-nav ul li {
-    width: 100px;
+    width: 125px;
   }
 }
 #top-nav ul li a {
   display: block;
-  padding: 25px;
+  padding: 25px 10px;
   width: 100%;
 }
 .main-screen {
@@ -424,7 +617,7 @@ SPECIFIC OBJECTS
   align-items: center;
   text-align: center;
   height: 100vh;
-  background: url("../img/bg.jpg");
+  background: url('../img/bg.jpg');
   background-size: cover;
 }
 .image-text-overlay-center {
@@ -432,7 +625,7 @@ SPECIFIC OBJECTS
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: rgba(45, 0, 0, 0.7);
+  background-color: rgba(61, 35, 35, 0.7);
   border-radius: 8px;
   width: 100%;
   height: 100%;
@@ -449,4 +642,10 @@ SPECIFIC OBJECTS
   .image-text-overlay-center {
     width: 800px;
   }
+}
+.triple-intro {
+  text-align: center;
+}
+.triple-intro img {
+  width: 80%;
 }

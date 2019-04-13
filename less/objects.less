@@ -1,0 +1,98 @@
+/* ========================================= 
+SPECIFIC OBJECTS
+===========================================*/
+/*
+Top-nav
+//------------------------------
+Sticky nav bar for desktop and tablet
+Collapseable for mobile. 
+*/
+#top-nav {
+	.inline-flex;
+	//Fix menu bar to top if >= tablet
+	@media @tablet {position: fixed;}
+    width: 100%;
+    background-color: @nav-bg-color; 
+
+	ul{
+		.wrap-flex;
+		text-align: center;
+		//change to inline flex if >= tablet
+		@media @tablet {.inline-flex;}
+		li {
+			width:100%; 
+			//only make 100px if >= tablet
+			@media @tablet{width: 125px;}
+			a {
+				display: block;
+				padding: 25px 10px;
+				width: 100%;
+			}
+		}
+	}
+}
+
+//Main Screen
+//------------------------------
+//The top call to action section.
+//Takes up viewport and has a background image.
+//Set bg img easily in styles.less
+.main-screen {
+	.abs-center-flex;
+	height: 100vh;
+	background: @main-bg-img-link;
+	background-size: cover;
+}
+
+//Image/Text Overlay
+//------------------------------
+//A quick overlay for centering text (usually on an image)
+//On mobile it will cover the whole image
+//Table with stretch width, desktop set width.
+.image-text-overlay-center {
+	.abs-center-flex;
+	background-color: @transparent-dark-color;
+	border-radius: @default-border-radius;
+	width:100%;
+	height:100%;
+	@media @tablet {
+		height: auto; 
+		width:80%; 
+		margin: auto; 
+		padding: 25px;
+	} 
+	@media @desktop {
+		width: 800px; 
+	} 
+}
+
+
+
+
+//Triple Intro
+//-----------
+//For the simplistic triple-column
+//icon / header / paragraph 
+//Section
+.triple-intro{
+	text-align: center;
+
+	img {
+		width: 80%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

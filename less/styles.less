@@ -1,0 +1,180 @@
+/* ========================================= 
+Quick Style Options
+Use this top section to quickly edit colors
+and other style settings across the site.
+===========================================*/
+//Main color scheme
+//Should be a easy color on the eyes; most present color on page
+@main-color: rgb(200, 100, 100);
+//The secondary color; should have the most contrast to main color
+@secondary-color: rgb(200, 200, 80);
+//Highlight color; this should be a bright, vivid color to draw attention
+@highlight-color: rgb(255, 0, 80);
+//@dark-color, @light-color, and @grey-color are 
+//automatically seeded from the main color 
+//(desaturated & lightened/darkened)
+
+//The background color for navigation
+@nav-bg-color: @light-color;
+//Main area background color
+@page-bg-color: @light-color;
+//Side and far background color
+@html-bg-color: @main-color;
+
+//Background image for main call to action
+@bg-img-name: 'bg.jpg';
+//If different source folder edit this line
+@main-bg-img-link: ~"url('../img/@{bg-img-name}')";
+
+//Settings for borders
+@default-border: 1px solid @dark-color;
+@default-border-radius: 8px;
+
+//Three default categories for text colors & fonts.
+//Main text is most p tags, links, and buttons. 
+//Should be plain and readable.
+@main-text-color: @dark-color;
+@main-text-font: "Arial";
+//Header text includes most headers, h2s-h5s.
+//Should be easy to read, but stand out.
+@header-text-color: @secondary-color;
+@header-text-font: "Times New Roman";
+//Top text is loosely h1s & h2s. 
+//Should be unique to capture attention. Displayed large.
+@top-text-color: @highlight-color;
+@top-text-font: "Comic Sans";
+
+//Link colors
+@link-color: @main-color;
+@link-hover: @highlight-color;
+
+//Button colors
+@default-button-text-color: @main-text-color;
+@default-button-bg-color: @light-color;
+@primary-button-text-color: @light-color;
+@primary-button-bg-color: @main-color;
+
+
+
+
+
+
+/* ========================================= 
+COMPLETE COLORS SET
+===========================================*/
+//Full Colors SET HERE 
+@dark-color: desaturate(darken(@main-color, 40%), 20%);
+@light-color: desaturate(lighten(@main-color, 40%), 20%);
+@grey-color:   desaturate(@main-color, 40);
+//
+@transparent-main-color: fadeout(@main-color, 30%);
+@transparent-secondary-color: fadeout(@secondary-color, 30%);
+@transparent-highlight-color: fadeout(@highlight-color, 30%);
+@transparent-dark-color: fadeout(@dark-color, 30%);
+@transparent-light-color: fadeout(@light-color, 30%);
+@transparent-grey-color: fadeout(@grey-color, 30%);
+//
+@dark-main-color: darken(@main-color, 10);
+@dark-secondary-color: darken(@secondary-color, 10);
+@dark-highlight-color: darken(@highlight-color, 10);
+@dark-dark-color: darken(@dark-color, 10);
+@dark-light-color: darken(@light-color, 10);
+@dark-grey-color: darken(@grey-color, 10);
+//
+@light-main-color: lighten(@main-color, 10);
+@light-secondary-color: lighten(@secondary-color, 10);
+@light-highlight-color: lighten(@highlight-color, 10);
+@light-dark-color: lighten(@dark-color, 10);
+@light-light-color: lighten(@light-color, 10);
+@light-grey-color: lighten(@grey-color, 10);
+
+
+
+
+//***************************
+//      BASIC SETTINGS
+//***************************
+html { background-color: @html-bg-color; }
+
+
+//*************************
+//     TEXT/FONTS
+//*************************
+.set-font-styles(@font, @font-size, @color, @margin, @line-height) {
+    font-family: @font;
+    font-size: @font-size;
+    color: @color;
+    margin: @margin;
+    line-height: @line-height;
+}
+
+h1 {
+    .set-font-styles(@top-text-font, 4em, @top-text-color, 5px 0 15px, 1); 
+}
+h2 {
+    .set-font-styles(@top-text-font, 3em, @header-text-color, 5px 0 15px, 1); 
+}
+h3 {
+    .set-font-styles(@header-text-font, 2em, @top-text-color, 5px 0 15px, 1); 
+}
+h4 {
+    .set-font-styles(@header-text-font, 1.5em, @header-text-color, 5px 0 15px, 1); 
+}
+h5 {
+    .set-font-styles(@header-text-font, 1em, @main-text-color, 5px 0 15px, 1); 
+}
+h6 {
+    .set-font-styles(@header-text-font, .8em, @header-text-color, 5px 0 15px, 1); 
+}
+p {
+    .set-font-styles(@main-text-font, 1em, @main-text-color, 5px 0 15px, 1.5); 
+}
+
+
+//***************************
+//      Links
+//***************************
+
+a {
+    color:@link-color;
+    text-decoration:none;
+    
+    &:visited {color:@link-color;}
+    &:hover {color:@link-hover;}
+}
+
+
+//***************************
+//      BUTTONS
+//***************************
+.button {
+	width: 100%;
+	margin: 10px 0;
+	@media @desktop {
+		width:150px; 
+		margin: 5px;
+	}
+	padding: 15px;
+	border-radius: @default-border-radius;
+	border:none;
+}
+
+.default-button {
+	.button;
+	color: @default-button-text-color;
+	background-color: @default-button-bg-color;
+}
+
+.primary-button {
+	.button;
+	color: @primary-button-text-color;
+	background-color: @primary-button-bg-color;
+}
+
+
+
+
+
+
+
+
