@@ -22,7 +22,7 @@ and other style settings across the site.
 @html-bg-color: @main-color;
 
 //Background image for main call to action
-@bg-img-name: 'bg.jpg';
+@bg-img-name: 'desk.jpg';
 //If different source folder edit this line
 @main-bg-img-link: ~"url('../img/@{bg-img-name}')";
 
@@ -109,25 +109,25 @@ html { background-color: @html-bg-color; }
 }
 
 h1 {
-    .set-font-styles(@top-text-font, 4em, @top-text-color, 5px 0 15px, 1); 
+    .set-font-styles(@top-text-font, 4em, @top-text-color, 5px 0, 1); 
 }
 h2 {
-    .set-font-styles(@top-text-font, 3em, @header-text-color, 5px 0 15px, 1); 
+    .set-font-styles(@top-text-font, 3em, @header-text-color, 5px 0, 1); 
 }
 h3 {
-    .set-font-styles(@header-text-font, 2em, @top-text-color, 5px 0 15px, 1); 
+    .set-font-styles(@header-text-font, 2em, @top-text-color, 5px 0, 1); 
 }
 h4 {
-    .set-font-styles(@header-text-font, 1.5em, @header-text-color, 5px 0 15px, 1); 
+    .set-font-styles(@header-text-font, 1.5em, @header-text-color, 5px 0, 1); 
 }
 h5 {
-    .set-font-styles(@header-text-font, 1em, @main-text-color, 5px 0 15px, 1); 
+    .set-font-styles(@header-text-font, 1em, @main-text-color, 5px 0, 1); 
 }
 h6 {
-    .set-font-styles(@header-text-font, .8em, @header-text-color, 5px 0 15px, 1); 
+    .set-font-styles(@header-text-font, .8em, @header-text-color, 5px 0, 1); 
 }
 p {
-    .set-font-styles(@main-text-font, 1em, @main-text-color, 5px 0 15px, 1.5); 
+    .set-font-styles(@main-text-font, 1em, @main-text-color, 5px 0, 1.5); 
 }
 
 

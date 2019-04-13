@@ -6,7 +6,7 @@ Responsive boxes & rows
 	margin: auto;
 	height: auto;
 	background-color: @page-bg-color;
-	@media @desktop { width: @desktop-size; }
+	@media @desktop { width: 876px; padding: 10px 78px;}
 	
 }
 
@@ -33,16 +33,29 @@ Responsive boxes & rows
 //DEFAULT BOXES
 // Defines .box-1, .box-2, ... .box-12
 // As well as .box-mobile-x, .box-tablet-x, and .box-desktop-x.
+//Multiple loops necessary for cascading rules
 each(range(12), {
 	@num: 13-@index;
     @percent: floor(@num/12*100);
     .box-@{num} { width: ~"@{percent}%"; }
-    .box-mobile-@{num} { @media @mobile { width: ~"@{percent}%"; } }
-    .box-tablet-@{num} { @media @tablet { width: ~"@{percent}%"; } }
-    .box-desktop-@{num} { @media @desktop { width: ~"@{percent}%"; } }
+});
+each(range(12), {
+	@num: 13-@index;
+    @percent: floor(@num/12*100);
+	.box-mobile-@{num} { @media @mobile { width: ~"@{percent}%"; } }    
+});
+each(range(12), {
+	@num: 13-@index;
+    @percent: floor(@num/12*100);
+	 .box-tablet-@{num} { @media @tablet { width: ~"@{percent}%"; } }    
+});
+each(range(12), {
+	@num: 13-@index;
+    @percent: floor(@num/12*100);
+	.box-desktop-@{num} { @media @desktop { width: ~"@{percent}%"; } }
 });
 
 //TARGET HIDDEN
 .mobile-hidden {@media @mobile {display:none;} }
-.tablet-hidden {@media @tablet {display:none;} }
+.tablet-hidden {@media @hard-tablet {display:none;} }
 .desktop-hidden {@media @desktop {display:none;} }
