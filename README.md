@@ -1,5 +1,11 @@
 Splat
 
+v.9
+content
+logo 
+rough fonts
+
+
 Version One
 [ ] Footer
 [ ] Other buttons & hover states
@@ -12,13 +18,19 @@ Version One
 [ ] One basic stat/chart design
 [ ] JQuery
     ( ) page sliding
-    ( ) mobile menu
+    ( ) mobile menu collapse
+    ( ) neat ReSize window for neat-img-overlay
 [ ] Fonts
     ( ) icon font
     ( ) 3 google fonts
 [ ] Misc
-    ( ) Full image transparent overlay class/div / Size window
+    ( ) Fleshed out color support for most things (grey-well, main-well, etc.)
+    ( ) 
 
-Version Two
+^ Complete first ^
+
+Version Two+
+[ ] Social media section
 [ ] Blog Designs
 [ ] Extended JQuery for charts & graphs
+[ ] Extended color support; lightest-main-color clearest-lighter-main-color

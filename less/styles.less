@@ -5,30 +5,36 @@ and other style settings across the site.
 ===========================================*/
 //Main color scheme
 //Should be a easy color on the eyes; most present color on page
-@main-color: rgb(200, 100, 100);
+@main-color: rgb(100, 92, 179);
 //The secondary color; should have the most contrast to main color
-@secondary-color: rgb(200, 200, 80);
+@secondary-color: rgb(97, 38, 41);
 //Highlight color; this should be a bright, vivid color to draw attention
-@highlight-color: rgb(255, 0, 80);
+@highlight-color: rgb(47, 37, 146);
 //@dark-color, @light-color, and @grey-color are 
 //automatically seeded from the main color 
 //(desaturated & lightened/darkened)
+@dark-color: desaturate(darken(@main-color, 40%), 20%);
+@light-color: desaturate(lighten(@main-color, 40%), 20%);
+@grey-color:   desaturate(@main-color, 40);
 
-//The background color for navigation
-@nav-bg-color: @light-color;
+//The colors for the top navigation bar
+@nav-bg-color: @light-dark-color;
+@nav-title-color: @light-color;
+@nav-link-color: lighten(@light-main-color, 10%);
 //Main area background color
-@page-bg-color: @light-color;
+@page-bg-color: @light-light-color;
+@alt-page-bg-color: @light-color;
 //Side and far background color
-@html-bg-color: @main-color;
+@html-bg-color: @light-color;
 
 //Background image for main call to action
-@bg-img-name: 'desk.jpg';
+@bg-img-name: 'computer.jpg';
 //If different source folder edit this line
 @main-bg-img-link: ~"url('../img/@{bg-img-name}')";
 
 //Settings for borders
 @default-border: 1px solid @dark-color;
-@default-border-radius: 8px;
+@default-border-radius: 4px;
 
 //Three default categories for text colors & fonts.
 //Main text is most p tags, links, and buttons. 
@@ -38,11 +44,11 @@ and other style settings across the site.
 //Header text includes most headers, h2s-h5s.
 //Should be easy to read, but stand out.
 @header-text-color: @secondary-color;
-@header-text-font: "Times New Roman";
+@header-text-font: "Arial";
 //Top text is loosely h1s & h2s. 
 //Should be unique to capture attention. Displayed large.
 @top-text-color: @highlight-color;
-@top-text-font: "Comic Sans";
+@top-text-font: "Impact";
 
 //Link colors
 @link-color: @main-color;
@@ -52,8 +58,8 @@ and other style settings across the site.
 @default-button-text-color: @main-text-color;
 @default-button-bg-color: @light-color;
 @primary-button-text-color: @light-color;
-@primary-button-bg-color: @main-color;
-
+@primary-button-bg-color: @highlight-color;
+//Secondary, accept, and cancel buttons
 
 
 
@@ -63,9 +69,6 @@ and other style settings across the site.
 COMPLETE COLORS SET
 ===========================================*/
 //Full Colors SET HERE 
-@dark-color: desaturate(darken(@main-color, 40%), 20%);
-@light-color: desaturate(lighten(@main-color, 40%), 20%);
-@grey-color:   desaturate(@main-color, 40);
 //
 @transparent-main-color: fadeout(@main-color, 30%);
 @transparent-secondary-color: fadeout(@secondary-color, 30%);
@@ -90,18 +93,11 @@ COMPLETE COLORS SET
 
 
 
-
-//***************************
-//      BASIC SETTINGS
-//***************************
-html { background-color: @html-bg-color; }
-
-
 //*************************
 //     TEXT/FONTS
 //*************************
 .set-font-styles(@font, @font-size, @color, @margin, @line-height) {
-    font-family: @font;
+    font-family: ~"@{font}, serif";
     font-size: @font-size;
     color: @color;
     margin: @margin;
@@ -109,25 +105,25 @@ html { background-color: @html-bg-color; }
 }
 
 h1 {
-    .set-font-styles(@top-text-font, 4em, @top-text-color, 5px 0, 1); 
+    .set-font-styles(@top-text-font, 4rem, @top-text-color, 5px 0, 1); 
 }
 h2 {
-    .set-font-styles(@top-text-font, 3em, @header-text-color, 5px 0, 1); 
+    .set-font-styles(@top-text-font, 3rem, @top-text-color, 5px 0, 1); 
 }
 h3 {
-    .set-font-styles(@header-text-font, 2em, @top-text-color, 5px 0, 1); 
+    .set-font-styles(@header-text-font, 2rem, @header-text-color, 5px 0, 1); 
 }
 h4 {
-    .set-font-styles(@header-text-font, 1.5em, @header-text-color, 5px 0, 1); 
+    .set-font-styles(@header-text-font, 1.5rem, @header-text-color, 5px 0, 1); 
 }
 h5 {
-    .set-font-styles(@header-text-font, 1em, @main-text-color, 5px 0, 1); 
+    .set-font-styles(@header-text-font, 1rem, @main-text-color, 5px 0, 1); 
 }
 h6 {
-    .set-font-styles(@header-text-font, .8em, @header-text-color, 5px 0, 1); 
+    .set-font-styles(@header-text-font, .8rem, @header-text-color, 5px 0, 1); 
 }
 p {
-    .set-font-styles(@main-text-font, 1em, @main-text-color, 5px 0, 1.5); 
+    .set-font-styles(@main-text-font, 1rem, @main-text-color, 5px 0, 1.5); 
 }
 
 
@@ -147,29 +143,70 @@ a {
 //***************************
 //      BUTTONS
 //***************************
-.button {
+.button(@color, @background) {
+    display: inline-block;
+    text-decoration: none;
 	width: 100%;
 	margin: 10px 0;
 	@media @desktop {
-		width:150px; 
+		width: auto; 
 		margin: 5px;
 	}
-	padding: 15px;
-	border-radius: @default-border-radius;
-	border:none;
+	padding: 8px 15px;
+    border-radius: @default-border-radius;
+    
+    border: 2px solid @background;
+    color: @color;
+    background-color: @background;
+    
+    &:hover {
+        border: 2px outset @background;
+        color: @background;
+        background: none;
+    }
+
 }
 
-.default-button {
-	.button;
-	color: @default-button-text-color;
-	background-color: @default-button-bg-color;
+//Double declarations for specificity on anchor tag.
+.default-button, a.default-button {
+	.button(@default-button-text-color, @default-button-bg-color);
 }
 
-.primary-button {
-	.button;
-	color: @primary-button-text-color;
-	background-color: @primary-button-bg-color;
+.primary-button, a.primary-button {
+    .button(@primary-button-text-color, @primary-button-bg-color);
 }
+
+//secondary, cancel, accept
+
+
+
+
+
+
+
+
+//***************************
+//      BUTTONS
+//***************************
+.image {
+    width: 100%;
+    img {
+        display:block;
+        width:90%;
+        margin: 0 auto;
+        border-radius: @default-border-radius;
+    }
+} 
+
+
+
+
+
+
+
+
+
+
 
 
 

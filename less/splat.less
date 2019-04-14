@@ -3,20 +3,38 @@ Responsive boxes & rows
 ===========================================*/
 .page-wrapper {
 	.container;
-	margin: auto;
+	margin: 0 auto;
+	padding: 0;
 	height: auto;
-	background-color: @page-bg-color;
-	@media @desktop { width: 876px; padding: 10px 78px;}
 	
 }
 
 //Draws a border and adds some margin/padding, to create essential
 //page divisions for a single page site.
 .page-section {
-	border-bottom: @default-border;
-	margin-bottom: 20px;
-	padding-bottom: 25px;
+	> .container {@media @desktop { width: 876px; }}
+	.abs-center-flex;	
+	padding: 40px 40px;
+	min-height:100vh;
+
+	//MAIN > [WHITE/GREY] > MAIN
+	background-color: @page-bg-color;
+	&:nth-child(odd) {background-color: @alt-page-bg-color;}
+	&:last-child, &:first-child {background-color: @main-color; color: @light-color;}
+
+	
 }
+.page-section.squished-page-section {
+	min-height: auto;
+}
+
+.page-section.footer{
+	.page-section.squished-page-section;
+	background-color: @light-dark-color;
+	h3  {color:@light-color;}
+	
+}
+
 //Allows you to change if only one view has the border.
 .mobile-page-section {@media @mobile {.page-section;}}
 .tablet-page-section {@media @tablet {.page-section;}}
@@ -25,7 +43,7 @@ Responsive boxes & rows
 
 //Default container and row.
 //Container is reccommended but not needed.
-.container { padding: 10px; width: 100%; height: 100%;}
+.container {padding: 10px; width: 100%; height: 100%;}
 //Row allows you to place "boxes" that wrap around.
 //12 columns to a row.
 .row { .wrap-flex; }

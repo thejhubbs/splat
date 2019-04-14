@@ -12,13 +12,22 @@ Collapseable for mobile.
 	//Fix menu bar to top if >= tablet
 	@media @tablet {position: fixed;}
     width: 100%;
-    background-color: @nav-bg-color; 
+	background-image: linear-gradient(lighten(@nav-bg-color, 15%), darken(@nav-bg-color, 5%), @nav-bg-color, lighten(@nav-bg-color, 5%) ); 
+	border-bottom: 2px outset @dark-color;
+	border-bottom-left-radius: @default-border-radius;
+	border-bottom-right-radius: @default-border-radius;
+	font-family: @header-text-font;
+	z-index: 10;
 
 	.logo-and-name {
 		.inline-flex;
 		img {
-			height: 42px;
+			height: 36px;
 			margin: 0 5px 0 15px;
+		}
+		h3 {
+			font-family: @top-text-font;
+			color: @nav-title-color;
 		}
 	}
 
@@ -30,11 +39,12 @@ Collapseable for mobile.
 		li {
 			width:100%; 
 			//only make 100px if >= tablet
-			@media @tablet{width: 125px;}
+			@media @tablet{width: auto;}
 			a {
 				display: block;
-				padding: 25px 10px;
+				padding: 20px;
 				width: 100%;
+				color: @nav-link-color;
 			}
 		}
 	}
@@ -51,7 +61,25 @@ Collapseable for mobile.
 	background: @main-bg-img-link;
 	background-size: cover;
 	border-bottom: 4px solid @light-dark-color;
+
+	h4, h5 { color: @main-color; margin: 25px;}
+	h6 {color:@grey-color;}
+	
+	h1 {
+		color: @light-color;
+		@media @mobile { font-size: 6rem; }
+		@media @hard-tablet { font-size: 8rem; }
+	}
+
 }
+
+//TITLE HR
+.title-hr {
+	width:60%;
+	margin:36px auto;
+}
+
+hr { margin: 12px auto 36px;}
 
 //Image/Text Overlay
 //------------------------------
@@ -61,18 +89,24 @@ Collapseable for mobile.
 .image-text-overlay-center {
 	.abs-center-flex;
 	background-color: @transparent-dark-color;
-	border-radius: @default-border-radius;
 	width:100%;
 	height:100%;
-	@media @tablet {
-		height: auto; 
-		width:80%; 
-		margin: auto; 
-		padding: 25px;
-	} 
-	@media @desktop {
-		width: 800px; 
-	} 
+	
+}
+
+
+.banner-quote {
+	text-align: center;
+	@media @desktop { padding: 75px; }
+	@media @mobile { padding: 25px 0 50px;}
+	@media @hard-tablet { padding: 25px 50px 50px;}
+
+	h2 {
+		@media @mobile { 
+			font-size: 2.5rem;
+		}
+	}
+	h4 { color: @light-color;}
 }
 
 
@@ -84,19 +118,96 @@ Collapseable for mobile.
 //icon / header / paragraph 
 //Section
 .triple-intro{
-	text-align: center;
-
-	img {
-		width: 80%;
-	}
+	p { height: 100px;}
+	h3 {margin-top: 25px;}
 }
 
 
+//Use case- when you care more about sizes matching up 
+//Then the display/borders of the pictures.
+//--This will create a "Frame" of fixed height and centered
+//width and a transparent overlay.
 
+.image-overlay {
+	.abs-center-flex;
+	position: relative;
+	border-radius: @default-border-radius;
+	margin:auto;
+	width:80%;
+	overflow:hidden;
+	div {
+		height:100%;
+		width:100%;
+		position: absolute;
+	}	
+	img{width:100%;}
+}
 
+.neat-img-overlay {
+	.image-overlay;
+	//Find a way to implement change in height.
+	height: 150px;
+	div {
+		background-color: fadeout(@transparent-main-color, 40%);
+	}
+	img {
+		//Implement Javascript to completely fit images,
+		//this leaves space.
+		max-width: 100%;
+		max-height: 100%;
+		width: auto;
+		height: auto;
+	}
+}
 
+.light-img-overlay {
+	.image-overlay;
+	div {background-color: fadeout(@transparent-light-color, 40%);}
+}
 
+.dark-img-overlay {
+	.image-overlay;
+	div {background-color: fadeout(@transparent-dark-color, 40%);}
+}
 
+.color-img-overlay {
+	.image-overlay;
+	div {background-color: fadeout(@transparent-main-color, 40%);}
+}
+
+.image-attribution-box {
+	width:90%;
+	margin: auto;
+	border-radius: @default-border-radius;
+	padding:2%;
+	h4 {text-align:center;text-decoration:underline;}
+    h6 {font-style:italic;}
+	img {
+		display:block;
+		width:100%;
+		border-radius: @default-border-radius;
+	}
+}
+
+.grey-image-attribution-box {
+	.image-attribution-box;
+	background-color: @light-grey-color;
+	img { border: 1px inset @grey-color;}
+}
+
+.main-image-attribution-box {
+	.image-attribution-box;
+	background-color: @light-main-color;
+	img { border: 1px inset @grey-color;}
+}
+
+.well {
+	.container;
+	border-radius: @default-border-radius;
+	border: @default-border;
+	background-color: @dark-light-color;
+	
+}
 
 
 
