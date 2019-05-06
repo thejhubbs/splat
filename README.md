@@ -1,9 +1,8 @@
 Splat
 
-v.9
-content
-logo 
-rough fonts
+v.9.1
+change splat.js to raw js (remove jquery)
+
 
 
 Version One
