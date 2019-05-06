@@ -3,19 +3,16 @@ Quick Style Options
 Use this top section to quickly edit colors
 and other style settings across the site.
 ===========================================*/
-//Main color scheme
-//Should be a easy color on the eyes; most present color on page
-@main-color: rgb(100, 92, 179);
-//The secondary color; should have the most contrast to main color
-@secondary-color: rgb(97, 38, 41);
-//Highlight color; this should be a bright, vivid color to draw attention
-@highlight-color: rgb(47, 37, 146);
 //@dark-color, @light-color, and @grey-color are 
 //automatically seeded from the main color 
 //(desaturated & lightened/darkened)
 @dark-color: desaturate(darken(@main-color, 40%), 20%);
 @light-color: desaturate(lighten(@main-color, 40%), 20%);
 @grey-color:   desaturate(@main-color, 40);
+
+//Cancel & confirm colors with mixed with red & green
+@cancel-color: mix(red, @main-color);
+@confirm-color: mix(green, @main-color);
 
 //The colors for the top navigation bar
 @nav-bg-color: @light-dark-color;
@@ -36,19 +33,27 @@ and other style settings across the site.
 @default-border: 1px solid @dark-color;
 @default-border-radius: 4px;
 
+// font-family: 'Ubuntu', sans-serif;
+// font-family: 'Oswald', sans-serif;
+// font-family: 'Abril Fatface', cursive;
+// font-family: 'Righteous', cursive;
+// font-family: 'Luckiest Guy', cursive;
+// font-family: 'Armata', sans-serif;
 //Three default categories for text colors & fonts.
 //Main text is most p tags, links, and buttons. 
 //Should be plain and readable.
 @main-text-color: @dark-color;
-@main-text-font: "Arial";
+@main-text-font: "Armata";
 //Header text includes most headers, h2s-h5s.
 //Should be easy to read, but stand out.
 @header-text-color: @secondary-color;
-@header-text-font: "Arial";
+@header-text-font: "Oswald";
 //Top text is loosely h1s & h2s. 
 //Should be unique to capture attention. Displayed large.
 @top-text-color: @highlight-color;
-@top-text-font: "Impact";
+@top-text-font: "Luckiest Guy";
+
+@unique-text-font: "Righteous";
 
 //Link colors
 @link-color: @main-color;
@@ -57,12 +62,18 @@ and other style settings across the site.
 //Button colors
 @default-button-text-color: @main-text-color;
 @default-button-bg-color: @light-color;
+
 @primary-button-text-color: @light-color;
 @primary-button-bg-color: @highlight-color;
-//Secondary, accept, and cancel buttons
 
+@secondary-button-text-color: @light-color;
+@secondary-button-bg-color: @secondary-color;
 
+@cancel-button-text-color: @light-color;
+@cancel-button-bg-color: @cancel-color;
 
+@confirm-button-text-color: @light-color;
+@confirm-button-bg-color: @confirm-color;
 
 
 /* ========================================= 
@@ -104,8 +115,11 @@ COMPLETE COLORS SET
     line-height: @line-height;
 }
 
+
+a, html { font-family: @main-text-font;}
+li {line-height:1.8;}
 h1 {
-    .set-font-styles(@top-text-font, 4rem, @top-text-color, 5px 0, 1); 
+    .set-font-styles(@unique-text-font, 4rem, @top-text-color, 5px 0, 1); 
 }
 h2 {
     .set-font-styles(@top-text-font, 3rem, @top-text-color, 5px 0, 1); 
@@ -117,10 +131,10 @@ h4 {
     .set-font-styles(@header-text-font, 1.5rem, @header-text-color, 5px 0, 1); 
 }
 h5 {
-    .set-font-styles(@header-text-font, 1rem, @main-text-color, 5px 0, 1); 
+    .set-font-styles(@header-text-font, 1rem, @main-text-color, 5px 0, 1.5); 
 }
 h6 {
-    .set-font-styles(@header-text-font, .8rem, @header-text-color, 5px 0, 1); 
+    .set-font-styles(@main-text-font, .8rem, @header-text-color, 5px 0, 1.5); 
 }
 p {
     .set-font-styles(@main-text-font, 1rem, @main-text-color, 5px 0, 1.5); 
@@ -163,6 +177,7 @@ a {
         border: 2px outset @background;
         color: @background;
         background: none;
+        
     }
 
 }
@@ -176,8 +191,17 @@ a {
     .button(@primary-button-text-color, @primary-button-bg-color);
 }
 
-//secondary, cancel, accept
+.secondary-button, a.secondary-button {
+    .button(@secondary-button-text-color, @secondary-button-bg-color);
+}
 
+.cancel-button, a.cancel-button {
+    .button(@cancel-button-text-color, @cancel-button-bg-color);
+}
+
+.confirm-button, a.confirm-button {
+    .button(@confirm-button-text-color, @confirm-button-bg-color);
+}
 
 
 

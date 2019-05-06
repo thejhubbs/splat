@@ -16,17 +16,16 @@ Collapseable for mobile.
 	border-bottom: 2px outset @dark-color;
 	border-bottom-left-radius: @default-border-radius;
 	border-bottom-right-radius: @default-border-radius;
-	font-family: @header-text-font;
 	z-index: 10;
 
 	.logo-and-name {
 		.inline-flex;
-		img {
+		span {
 			height: 36px;
 			margin: 0 5px 0 15px;
 		}
 		h3 {
-			font-family: @top-text-font;
+			font-family: @unique-text-font;
 			color: @nav-title-color;
 		}
 	}
@@ -45,9 +44,15 @@ Collapseable for mobile.
 				padding: 20px;
 				width: 100%;
 				color: @nav-link-color;
+				font-family: @header-text-font;
 			}
 		}
 	}
+}
+
+#top-nav.top-nav-transparent {
+	background:none;
+	border-color:transparent;
 }
 
 //Main Screen
@@ -67,10 +72,25 @@ Collapseable for mobile.
 	
 	h1 {
 		color: @light-color;
+		font-size: 6rem;
 		@media @mobile { font-size: 6rem; }
 		@media @hard-tablet { font-size: 8rem; }
 	}
 
+}
+
+.main-screen.main-screen-layout-2 {
+	align-items:bottom;
+	.image-text-overlay-center { 
+		text-align:left;
+		justify-content: flex-start;
+		align-items:flex-end;
+		padding:0 0 45px 25px;
+	}
+	.title-hr {margin:24px 0;}
+	h1 { font-size: 4rem; }
+	h4, h5 {margin-top:10px;}
+	a{}
 }
 
 //TITLE HR
@@ -91,7 +111,9 @@ hr { margin: 12px auto 36px;}
 	background-color: @transparent-dark-color;
 	width:100%;
 	height:100%;
-	
+	a.primary-button:hover {
+		color:@light-color;
+	}
 }
 
 
@@ -107,6 +129,7 @@ hr { margin: 12px auto 36px;}
 		}
 	}
 	h4 { color: @light-color;}
+	h5 { color: @dark-light-color;}
 }
 
 
@@ -118,7 +141,6 @@ hr { margin: 12px auto 36px;}
 //icon / header / paragraph 
 //Section
 .triple-intro{
-	p { height: 100px;}
 	h3 {margin-top: 25px;}
 }
 
@@ -151,8 +173,6 @@ hr { margin: 12px auto 36px;}
 		background-color: fadeout(@transparent-main-color, 40%);
 	}
 	img {
-		//Implement Javascript to completely fit images,
-		//this leaves space.
 		max-width: 100%;
 		max-height: 100%;
 		width: auto;
@@ -179,26 +199,41 @@ hr { margin: 12px auto 36px;}
 	width:90%;
 	margin: auto;
 	border-radius: @default-border-radius;
-	padding:2%;
-	h4 {text-align:center;text-decoration:underline;}
-    h6 {font-style:italic;}
+	border: 1px outset @grey-color;
+	padding:0;
+	h4 {
+		text-align:center;
+		text-decoration:underline;
+		margin: 10px;
+	}
+    h6 {
+		font-style:italic;
+		color: @highlight-color;
+		margin: 10px; 
+	}
 	img {
 		display:block;
 		width:100%;
-		border-radius: @default-border-radius;
+		border-radius: 0;
+		// border: 1px inset @grey-color;
 	}
+	
 }
 
 .grey-image-attribution-box {
 	.image-attribution-box;
-	background-color: @light-grey-color;
-	img { border: 1px inset @grey-color;}
+	background-color: @dark-light-color;
 }
+
+.light-image-attribution-box {
+	.image-attribution-box;
+	background-color: @light-color;	
+}
+
 
 .main-image-attribution-box {
 	.image-attribution-box;
 	background-color: @light-main-color;
-	img { border: 1px inset @grey-color;}
 }
 
 .well {
@@ -209,8 +244,17 @@ hr { margin: 12px auto 36px;}
 	
 }
 
+.subtext {
+	display:block;
+	font-size:80%;
+}
 
-
+.footer {		
+	h3 {
+		font-family: @unique-text-font;
+		color: @nav-title-color;
+	}
+}
 
 
 

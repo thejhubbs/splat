@@ -9,8 +9,19 @@
 
   <link rel="stylesheet" href="css/index.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Armata|Luckiest+Guy|Oswald|Righteous|Ubuntu"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
-  <!--[if lt IE 9]>
+
+  <script src="js/splat.js"></script>
+
+
+
+
+    <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
@@ -18,23 +29,21 @@
 <body>
   <nav id="top-nav">
     <div class="logo-and-name">
-      <img src="img/logo.png" />
-      <h3>SPLAT</h3>
+      <h3><span class="fas fa-tint"></span> Splat</h3>
     </div>
 
     <ul>
-      <li><a href="#">Top</a></li>
-      <li><a href="#">Overview</a></li>
-      <li><a href="#">Responsive Design</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Download</a></li>
+      <li><a class="scroll" href="#top">Top</a></li>
+      <li><a class="scroll" href="#intro">Overview</a></li>
+      <li><a class="scroll" href="#features">Responsive Design</a></li>
+      <li><a class="scroll" href="#styles">Styles</a></li>
+      <li><a class="scroll" href="#download">Download</a></li>
     </ul>
   </nav>
 
-  <header class="main-screen">
+  <header id="top" class="main-screen">
     <div class="image-text-overlay-center container">
       <div>
-
 
         <hr class="title-hr" />
         <h1>Splat</h1>
@@ -53,17 +62,26 @@
   </header>
 
   <div class="page-wrapper">
-    <section class="page-section squished-page-section banner-quote">
+    <section id="overview" class="page-section squished-page-section banner-quote">
       <div class="container">
-        <h2>"A responsive, stylistic, simple single page website template"</h2>
-        <h4>Using LESS, HTML, and JQuery</h4>
+        <h1>
+          <span class="fas fa-mobile-alt"></span>
+          <span class="fas fa-tablet-alt"></span>
+          <span class="fas fa-desktop"></span>
+        </h1>
+        <h2>A responsive, simple, single-page website template</h2>
+        <hr class="title-hr" />
+        <h4>A project to design & develop a completely responsive & customizeable layout from scratch</h4>
+        <hr class="title-hr" />
+        <h5>No Bootstrap, No JQueryUI, no pre-written code or libraries, no design-source files. A display of knowledge
+          of designing & building components from scratch.</h5>
       </div>
     </section>
 
     <section id="intro" class="page-section triple-intro">
       <div class="container">
         <h5>Powerful. Sleek. Customizeable.</h5>
-        <h2>The Classic Triple Intro</h2>
+        <h2>Making This Template Different</h2>
         <hr />
         <div class="row">
           <div class="box-12-mobile box-tablet-6 box-desktop-4">
@@ -73,9 +91,9 @@
                 <!--Necessary empty div for overlay-->
                 <img src="img/smoke.jpg" />
               </div>
-              <h3>Single Page</h3>
-              <p>Best used by people with the ability to code LESS and HTML5.</p>
-              <a href="#" class="default-button">Take an Action</a>
+              <h3>Customizeable Design</h3>
+              <p>Drastically & quickly change the appearance of the template by changing fonts, styles, and other things like border radius all from an easy file.</p>
+              <a href="#" class="default-button">See Full List</a>
             </div>
           </div>
           <div class="box-12-mobile box-tablet-6 box-desktop-4">
@@ -85,12 +103,10 @@
                 <!--Necessary empty div for overlay-->
                 <img src="img/network.jpg" />
               </div>
-              <h3>DRY LESS</h3>
-              <p>Written to be edited. Quickly set colors, fonts, and other styles once, in an easy accessible file, to
-                immediately own your own
-                design.</p>
+              <h3>Colorize</h3>
+              <p>All colors you see now are generated from one "main" color. Choose yours and instantly theme all other colors to match. Of course, these generations are easily overrideable for the designers out there.</p>
 
-              <a href="#" class="default-button">Take an Action</a>
+              <a href="#" class="default-button">See Examples</a>
             </div>
           </div>
           <div class="box-12-mobile box-tablet-12 box-desktop-4">
@@ -102,9 +118,9 @@
 
               </div>
               <h3>Reusable HTML</h3>
-              <p>Comes with a plethora of HTML objects to use as you see fit.</p>
+              <p>Standard 12 column (boxes) responsive design, including classes to hide and display at breakpoints. Comes with a plethora of HTML objects to use as you see fit.</p>
 
-              <a href="#" class="default-button">Take an Action</a>
+              <a href="#" class="default-button">See Features</a>
             </div>
           </div>
         </div>
@@ -231,7 +247,7 @@
               <a href="#" class="primary-button">Primary</a>
               <a href="#" class="secondary-button">Secondary</a>
               <a href="#" class="cancel-button">Cancel</a>
-              <a href="#" class="accept-button">Accept</a>
+              <a href="#" class="confirm-button">Accept</a>
             </section>
           </div>
 
@@ -257,16 +273,16 @@
 
 
 
-                <div class="box-12 box-tablet-6 box-desktop-4">
+                <div class="box-12 box-tablet-6">
                   <h5>Before</h5>
-                  <p>A quick description</p>
+                  <p>This is an image put in without the .image div.</p>
                   <!--CODE-->
                   <div class='example-image'><img src="img/smoke.jpg" /></div>
                   <!--CODE-->
                 </div>
 
 
-                <div class="box-12 box-tablet-6 box-desktop-4">
+                <div class="box-12 box-tablet-6">
                   <h5>Default</h5>
                   <p>Surrounded by .image div, sets small margin and border radius, centers.</p>
                   <!--CODE-->
@@ -274,15 +290,17 @@
                   <!--CODE-->
                 </div>
 
+              </div>
+            </section>
+            
 
-                <!-- 
-  Image Overlays
--->
+            <h4>Overlays</h4>
+            <section class="well">
+                <p>Surrounded by .neat-img-overlay and with an empty div immediately prior to the image tag. </p>
+              <div class="row">
                 <div class="box-12 box-tablet-6 box-desktop-4">
                   <h5>Light Overlay</h5>
-                  <p>Surrounded by .light-img-overlay and with an empty div immediately prior to the image tag. Set
-                    height
-                    for "neatness".</p>
+                  <p>Adds a slight, transparent overlay.</p>
                   <!--CODE-->
                   <div class='light-img-overlay'>
                     <div></div>
@@ -294,10 +312,8 @@
 
 
                 <div class="box-12 box-tablet-6 box-desktop-4">
-                  <h5>color Overlay</h5>
-                  <p>Surrounded by .light-img-overlay and with an empty div immediately prior to the image tag. Set
-                    height
-                    for "neatness".</p>
+                  <h5>Color Overlay</h5>
+                  <p>Adds a slight overlay of the main color.</p>
                   <!--CODE-->
                   <div class='color-img-overlay'>
                     <div></div>
@@ -308,25 +324,8 @@
                 </div>
 
                 <div class="box-12 box-tablet-6 box-desktop-4">
-                  <h5>dark Overlay</h5>
-                  <p>Surrounded by .light-img-overlay and with an empty div immediately prior to the image tag. Set
-                    height
-                    for "neatness".</p>
-                  <!--CODE-->
-                  <div class='dark-img-overlay'>
-                    <div></div>
-                    <!--Necessary empty div for overlay-->
-                    <img src="img/smoke.jpg" />
-                  </div>
-                  <!--CODE-->
-                </div>
-
-
-                <div class="box-12 box-tablet-6 box-desktop-4">
                   <h5>Neat Overlay</h5>
-                  <p>Surrounded by .neat-img-overlay and with an empty div immediately prior to the image tag. Set
-                    height
-                    for "neatness".</p>
+                  <p>Set height and "cover" for "neatness".</p>
                   <!--CODE-->
                   <div class='neat-img-overlay'>
                     <div></div>
@@ -336,13 +335,17 @@
                   <!--CODE-->
                 </div>
 
-                <!-- 
-  Image boxes 
--->
+
+              </div>
+            </section>
+
+          <h4>Image boxes</h4>
+            <section class="well">
+              <div class="row">
 
                 <div class="box-12 box-tablet-6 box-desktop-4">
-                  <h5>Attribution</h5>
-                  <p>A quick description</p>
+                  <h5>Above and below</h5>
+                  <p>A title and an attribution.</p>
                   <!--CODE-->
                   <div class='image-attribution-box'>
                     <h4>Optional Title</h4>
@@ -353,10 +356,10 @@
                 </div>
 
                 <div class="box-12 box-tablet-6 box-desktop-4">
-                  <h5>Attribution</h5>
+                  <h5>Just a Title</h5>
                   <p>A quick description</p>
                   <!--CODE-->
-                  <div class='grey-image-attribution-box'>
+                  <div class='light-image-attribution-box'>
                     <h4>Optional Title</h4>
                     <img src="img/smoke.jpg" />
                   </div>
@@ -364,8 +367,8 @@
                 </div>
 
                 <div class="box-12 box-tablet-6 box-desktop-4">
-                  <h5>Attribution</h5>
-                  <p>A quick description</p>
+                  <h5>Main Color</h5>
+                  <p>A highlight or primary image.</p>
                   <!--CODE-->
                   <div class='main-image-attribution-box'>
                     <img src="img/smoke.jpg" />
@@ -374,27 +377,7 @@
                   <!--CODE-->
                 </div>
 
-
-                <div class="box-12 box-tablet-6 box-desktop-4">
-                  <h5>Default</h5>
-                  <p>A quick description</p>
-                  <!--CODE-->
-                  <div class='image'><img src="img/smoke.jpg" /></div>
-                  <!--CODE-->
-                </div>
-
-                <div class="box-12 box-tablet-6 box-desktop-4">
-                  <h5>Default</h5>
-                  <p>A quick description</p>
-                  <!--CODE-->
-                  <div class='image'><img src="img/smoke.jpg" /></div>
-                  <!--CODE-->
-                </div>
-
               </div>
-
-
-
 
             </section>
           </div>
@@ -417,6 +400,37 @@
       </div>
     </div>
 
+
+    <div id="objects" class="page-section">
+      <div class="container">
+        <div class="row">
+          <div class="box-12">
+            <h2>Objects</h2>
+          </div>
+
+          <div class="box-12">
+            <h3>Menu Bar</h3>
+            <p>Transparent</p>
+          </div>
+          
+          <div class="box-12">
+            <h3>Call to Action</h3>
+            <p>Layout 2</p>          
+          </div>
+          
+          <div class="box-12">
+            <h3>Page Sections</h3>
+            <p>triple intro, contact</p>          
+          </div>
+
+          <div class="box-12">
+            <h3>PreLayouts</h3>
+            <p>Profile</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="download" class="page-section">
       <div class="container">
         <div class="row">
@@ -431,8 +445,12 @@
             </ol>
           </div>
           <div class="box-12 box-desktop-6">
-            <h1>I<br />^</h1>
-            <a href="#" class="primary-button">Github link</a>
+            <h1><span class="fas fa-download"></span></h1>
+            <a href="#" class="primary-button">Github link</a><br />
+            <a href="#" class="default-button">Checkout My Other Work <span class="fas fa-server"></span></a><br />
+            <a href="#" class="default-button">Hire Me To Design Yours <span class="fas fa-user-tie"></span></a>
+
+
           </div>
 
         </div>
@@ -443,9 +461,16 @@
   </div>
 
   <div id="footer" class="page-section footer">
-    <h3>Splat</h3>
-
-    <!-- Navigation -->
+    <div class="container">
+    <h3>Splat <span class="fas fa-tint"></span></h3>
+    <hr  />
+    <h6>This page was made by this template.</h6>
+    <ul>
+      <li>My Portfolio</li>
+      <li>My Github</li>
+      <li>My Email</li>
+    </ul>
+    </div>
   </div>
 
 </body>

@@ -142,50 +142,57 @@ and other style settings across the site.
 /* ========================================= 
 COMPLETE COLORS SET
 ===========================================*/
+a,
+html {
+  font-family: "Armata";
+}
+li {
+  line-height: 1.8;
+}
 h1 {
-  font-family: Impact, serif;
+  font-family: Righteous, serif;
   font-size: 4rem;
-  color: #2f2592;
+  color: #3d2584;
   margin: 5px 0;
   line-height: 1;
 }
 h2 {
-  font-family: Impact, serif;
+  font-family: Luckiest Guy, serif;
   font-size: 3rem;
-  color: #2f2592;
+  color: #3d2584;
   margin: 5px 0;
   line-height: 1;
 }
 h3 {
-  font-family: Arial, serif;
+  font-family: Oswald, serif;
   font-size: 2rem;
-  color: #612629;
+  color: #a768a1;
   margin: 5px 0;
   line-height: 1;
 }
 h4 {
-  font-family: Arial, serif;
+  font-family: Oswald, serif;
   font-size: 1.5rem;
-  color: #612629;
+  color: #a768a1;
   margin: 5px 0;
   line-height: 1;
 }
 h5 {
-  font-family: Arial, serif;
+  font-family: Oswald, serif;
   font-size: 1rem;
   color: #1d1c27;
   margin: 5px 0;
-  line-height: 1;
+  line-height: 1.5;
 }
 h6 {
-  font-family: Arial, serif;
+  font-family: Armata, serif;
   font-size: 0.8rem;
-  color: #612629;
+  color: #a768a1;
   margin: 5px 0;
-  line-height: 1;
+  line-height: 1.5;
 }
 p {
-  font-family: Arial, serif;
+  font-family: Armata, serif;
   font-size: 1rem;
   color: #1d1c27;
   margin: 5px 0;
@@ -199,7 +206,7 @@ a:visited {
   color: #645cb3;
 }
 a:hover {
-  color: #2f2592;
+  color: #3d2584;
 }
 .default-button,
 a.default-button {
@@ -234,9 +241,9 @@ a.primary-button {
   margin: 10px 0;
   padding: 8px 15px;
   border-radius: 4px;
-  border: 2px solid #2f2592;
+  border: 2px solid #3d2584;
   color: #ebebf0;
-  background-color: #2f2592;
+  background-color: #3d2584;
 }
 @media screen and (min-width: 800px) {
   .primary-button,
@@ -247,8 +254,83 @@ a.primary-button {
 }
 .primary-button:hover,
 a.primary-button:hover {
-  border: 2px outset #2f2592;
-  color: #2f2592;
+  border: 2px outset #3d2584;
+  color: #3d2584;
+  background: none;
+}
+.secondary-button,
+a.secondary-button {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px 15px;
+  border-radius: 4px;
+  border: 2px solid #a768a1;
+  color: #ebebf0;
+  background-color: #a768a1;
+}
+@media screen and (min-width: 800px) {
+  .secondary-button,
+  a.secondary-button {
+    width: auto;
+    margin: 5px;
+  }
+}
+.secondary-button:hover,
+a.secondary-button:hover {
+  border: 2px outset #a768a1;
+  color: #a768a1;
+  background: none;
+}
+.cancel-button,
+a.cancel-button {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px 15px;
+  border-radius: 4px;
+  border: 2px solid #b22e5a;
+  color: #ebebf0;
+  background-color: #b22e5a;
+}
+@media screen and (min-width: 800px) {
+  .cancel-button,
+  a.cancel-button {
+    width: auto;
+    margin: 5px;
+  }
+}
+.cancel-button:hover,
+a.cancel-button:hover {
+  border: 2px outset #b22e5a;
+  color: #b22e5a;
+  background: none;
+}
+.confirm-button,
+a.confirm-button {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px 15px;
+  border-radius: 4px;
+  border: 2px solid #326e5a;
+  color: #ebebf0;
+  background-color: #326e5a;
+}
+@media screen and (min-width: 800px) {
+  .confirm-button,
+  a.confirm-button {
+    width: auto;
+    margin: 5px;
+  }
+}
+.confirm-button:hover,
+a.confirm-button:hover {
+  border: 2px outset #326e5a;
+  color: #326e5a;
   background: none;
 }
 .image {
@@ -325,9 +407,11 @@ Responsive boxes & rows
 }
 .page-section.squished-page-section {
   min-height: auto;
+  padding: 100px 40px;
 }
 .page-section.footer {
   min-height: auto;
+  padding: 100px 40px;
   background-color: #333145;
 }
 .page-section.footer h3 {
@@ -666,7 +750,6 @@ Collapseable for mobile.
   border-bottom: 2px outset #1d1c27;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  font-family: "Arial";
   z-index: 10;
 }
 @media screen and (min-width: 500px) {
@@ -679,12 +762,12 @@ Collapseable for mobile.
   justify-content: space-between;
   align-items: center;
 }
-#top-nav .logo-and-name img {
+#top-nav .logo-and-name span {
   height: 36px;
   margin: 0 5px 0 15px;
 }
 #top-nav .logo-and-name h3 {
-  font-family: "Impact";
+  font-family: "Righteous";
   color: #ebebf0;
 }
 #top-nav ul {
@@ -715,6 +798,11 @@ Collapseable for mobile.
   padding: 20px;
   width: 100%;
   color: #a6a2d3;
+  font-family: "Oswald";
+}
+#top-nav.top-nav-transparent {
+  background: none;
+  border-color: transparent;
 }
 .main-screen {
   display: flex;
@@ -736,6 +824,7 @@ Collapseable for mobile.
 }
 .main-screen h1 {
   color: #ebebf0;
+  font-size: 6rem;
 }
 @media screen and (max-width: 500px) {
   .main-screen h1 {
@@ -746,6 +835,25 @@ Collapseable for mobile.
   .main-screen h1 {
     font-size: 8rem;
   }
+}
+.main-screen.main-screen-layout-2 {
+  align-items: bottom;
+}
+.main-screen.main-screen-layout-2 .image-text-overlay-center {
+  text-align: left;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 0 0 45px 25px;
+}
+.main-screen.main-screen-layout-2 .title-hr {
+  margin: 24px 0;
+}
+.main-screen.main-screen-layout-2 h1 {
+  font-size: 4rem;
+}
+.main-screen.main-screen-layout-2 h4,
+.main-screen.main-screen-layout-2 h5 {
+  margin-top: 10px;
 }
 .title-hr {
   width: 60%;
@@ -762,6 +870,9 @@ hr {
   background-color: rgba(29, 28, 39, 0.7);
   width: 100%;
   height: 100%;
+}
+.image-text-overlay-center a.primary-button:hover {
+  color: #ebebf0;
 }
 .banner-quote {
   text-align: center;
@@ -789,8 +900,8 @@ hr {
 .banner-quote h4 {
   color: #ebebf0;
 }
-.triple-intro p {
-  height: 100px;
+.banner-quote h5 {
+  color: #cecddb;
 }
 .triple-intro h3 {
   margin-top: 25px;
@@ -913,63 +1024,92 @@ hr {
   width: 90%;
   margin: auto;
   border-radius: 4px;
-  padding: 2%;
+  border: 1px outset #888888;
+  padding: 0;
 }
 .image-attribution-box h4 {
   text-align: center;
   text-decoration: underline;
+  margin: 10px;
 }
 .image-attribution-box h6 {
   font-style: italic;
+  color: #3d2584;
+  margin: 10px;
 }
 .image-attribution-box img {
   display: block;
   width: 100%;
-  border-radius: 4px;
+  border-radius: 0;
 }
 .grey-image-attribution-box {
   width: 90%;
   margin: auto;
   border-radius: 4px;
-  padding: 2%;
-  background-color: #a1a1a1;
+  border: 1px outset #888888;
+  padding: 0;
+  background-color: #cecddb;
 }
 .grey-image-attribution-box h4 {
   text-align: center;
   text-decoration: underline;
+  margin: 10px;
 }
 .grey-image-attribution-box h6 {
   font-style: italic;
+  color: #3d2584;
+  margin: 10px;
 }
 .grey-image-attribution-box img {
   display: block;
   width: 100%;
-  border-radius: 4px;
+  border-radius: 0;
 }
-.grey-image-attribution-box img {
-  border: 1px inset #888888;
+.light-image-attribution-box {
+  width: 90%;
+  margin: auto;
+  border-radius: 4px;
+  border: 1px outset #888888;
+  padding: 0;
+  background-color: #ebebf0;
+}
+.light-image-attribution-box h4 {
+  text-align: center;
+  text-decoration: underline;
+  margin: 10px;
+}
+.light-image-attribution-box h6 {
+  font-style: italic;
+  color: #3d2584;
+  margin: 10px;
+}
+.light-image-attribution-box img {
+  display: block;
+  width: 100%;
+  border-radius: 0;
 }
 .main-image-attribution-box {
   width: 90%;
   margin: auto;
   border-radius: 4px;
-  padding: 2%;
+  border: 1px outset #888888;
+  padding: 0;
   background-color: #857fc3;
 }
 .main-image-attribution-box h4 {
   text-align: center;
   text-decoration: underline;
+  margin: 10px;
 }
 .main-image-attribution-box h6 {
   font-style: italic;
+  color: #3d2584;
+  margin: 10px;
 }
 .main-image-attribution-box img {
   display: block;
   width: 100%;
-  border-radius: 4px;
-}
-.main-image-attribution-box img {
-  border: 1px inset #888888;
+  border-radius: 0;
 }
 .well {
   padding: 10px;
@@ -978,6 +1118,14 @@ hr {
   border-radius: 4px;
   border: 1px solid #1d1c27;
   background-color: #cecddb;
+}
+.subtext {
+  display: block;
+  font-size: 80%;
+}
+.footer h3 {
+  font-family: "Righteous";
+  color: #ebebf0;
 }
 .example-boxes div {
   text-align: center;

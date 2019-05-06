@@ -7,22 +7,15 @@ rough fonts
 
 
 Version One
-[ ] Footer
-[ ] Other buttons & hover states
-    ( ) accept, cancel, secondary colors
-    ( ) hover states
 [ ] HTML template sections for content
     ( ) Content
-[ ] Contact Form
-[ ] Gallery
-[ ] One basic stat/chart design
+    [ ] Contact Form
+    [ ] Gallery
+    [ ] One basic stat/chart design
 [ ] JQuery
     ( ) page sliding
     ( ) mobile menu collapse
     ( ) neat ReSize window for neat-img-overlay
-[ ] Fonts
-    ( ) icon font
-    ( ) 3 google fonts
 [ ] Misc
     ( ) Fleshed out color support for most things (grey-well, main-well, etc.)
     ( ) 
