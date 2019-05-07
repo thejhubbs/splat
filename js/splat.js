@@ -1,4 +1,4 @@
-//Page slide, nav bar, neat resize
+//Nav bar
 
 $('document').ready(function () {
     scrollLinks();

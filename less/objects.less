@@ -200,7 +200,8 @@ hr { margin: 12px auto 36px;}
 	margin: auto;
 	border-radius: @default-border-radius;
 	border: 1px outset @grey-color;
-	padding:0;
+	padding:10px 0;
+	margin: 0 0 25px;
 	h4 {
 		text-align:center;
 		text-decoration:underline;
@@ -248,6 +249,52 @@ hr { margin: 12px auto 36px;}
 	display:block;
 	font-size:80%;
 }
+
+//FORMS
+.form-colors {
+	background-color:transparent;
+	border: 2px solid @highlight-color;
+	font-family: @main-text-font;
+}
+
+.block-form {
+	.form-colors;
+	width:100%;
+	padding:10px;
+	margin:5px 10px 20px;
+	border-radius: @default-border-radius;
+	display:block;
+
+	&:hover {
+		outline: 1px solid @dark-light-color;
+	}
+
+	&:focus {
+		outline-color: @light-color;
+		outline-width:2px;
+		background-color: @transparent-light-color;
+		font-weight: bold;
+	}
+}
+
+
+input[type=text] {
+	.block-form();
+}
+
+input[type=submit] {
+	font-family:@header-text-font;
+}
+
+select {
+	.block-form();
+}
+
+textarea {
+	.block-form();
+}
+
+
 
 .footer {		
 	h3 {
