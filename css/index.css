@@ -772,6 +772,9 @@ Collapseable for mobile.
 }
 #top-nav .logo-and-name h2 {
   display: none;
+  padding: 5px 0;
+  font-size: 2.5em;
+  color: #ebebf0;
 }
 @media screen and (max-width: 500px) {
   #top-nav .logo-and-name h2 {
@@ -797,6 +800,7 @@ Collapseable for mobile.
   align-content: space-around;
   flex-wrap: wrap;
   text-align: center;
+  width: 100%;
 }
 @media screen and (min-width: 500px) {
   #top-nav ul {
@@ -823,10 +827,15 @@ Collapseable for mobile.
 }
 #top-nav ul li a {
   display: block;
-  padding: 20px;
+  padding: 15px;
   width: 100%;
   color: #a6a2d3;
   font-family: "Oswald";
+}
+@media screen and (max-width: 500px) {
+  #top-nav ul li a {
+    background-color: rgba(29, 28, 39, 0.7);
+  }
 }
 #top-nav.top-nav-transparent {
   background: none;

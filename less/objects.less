@@ -29,6 +29,9 @@ Collapseable for mobile.
 		}
 		h2 {
 			display:none;
+			padding:5px 0;
+			font-size:2.5em;
+			color: @nav-title-color;
 			@media @mobile {
 				width:100%; margin:0;
 				display:inline-block;
@@ -46,19 +49,23 @@ Collapseable for mobile.
 	ul{
 		.wrap-flex;
 		text-align: center;
+		width:100%;
 		//change to inline flex if >= tablet
 		@media @tablet {.inline-flex;}
 		@media @mobile {position: absolute; top:50px; right:0; display:none;}
+		
 		li {
 			width:100%; 
 			//only make 100px if >= tablet
 			@media @tablet { width: auto;}
 			a {
 				display: block;
-				padding: 20px;
+				padding: 15px;
 				width: 100%;
 				color: @nav-link-color;
 				font-family: @header-text-font;
+				@media @mobile {background-color:@transparent-dark-color;}
+	
 			}
 		}
 	}
