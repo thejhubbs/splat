@@ -1,10 +1,10 @@
 Splat
 
-v.9.1
+v.9.2
 php form to email stuff
 click off menu
 
-Version One
+To Come
 [ ] HTML template sections for content
     ( ) Content
     [ ] One basic stat/chart design

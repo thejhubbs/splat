@@ -846,7 +846,7 @@ Collapseable for mobile.
   font-family: "Armata";
   width: 100%;
   padding: 10px;
-  margin: 5px 10px 20px;
+  margin: 5px 0 20px;
   border-radius: 4px;
   display: block;
 }
@@ -865,7 +865,7 @@ input[type=text] {
   font-family: "Armata";
   width: 100%;
   padding: 10px;
-  margin: 5px 10px 20px;
+  margin: 5px 0 20px;
   border-radius: 4px;
   display: block;
 }
@@ -887,7 +887,7 @@ select {
   font-family: "Armata";
   width: 100%;
   padding: 10px;
-  margin: 5px 10px 20px;
+  margin: 5px 0 20px;
   border-radius: 4px;
   display: block;
 }
@@ -906,7 +906,7 @@ textarea {
   font-family: "Armata";
   width: 100%;
   padding: 10px;
-  margin: 5px 10px 20px;
+  margin: 5px 0 20px;
   border-radius: 4px;
   display: block;
 }
