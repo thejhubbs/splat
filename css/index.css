@@ -198,6 +198,10 @@ p {
   margin: 5px 0;
   line-height: 1.5;
 }
+.subtext {
+  display: block;
+  font-size: 80%;
+}
 a {
   color: #645cb3;
   text-decoration: none;
@@ -207,140 +211,6 @@ a:visited {
 }
 a:hover {
   color: #3d2584;
-}
-.default-button,
-a.default-button {
-  display: inline-block;
-  text-decoration: none;
-  width: 100%;
-  margin: 10px 0;
-  padding: 8px 15px;
-  border-radius: 4px;
-  border: 2px solid #ebebf0;
-  color: #1d1c27;
-  background-color: #ebebf0;
-}
-@media screen and (min-width: 800px) {
-  .default-button,
-  a.default-button {
-    width: auto;
-    margin: 5px;
-  }
-}
-.default-button:hover,
-a.default-button:hover {
-  border: 2px outset #ebebf0;
-  color: #ebebf0;
-  background: none;
-}
-.primary-button,
-a.primary-button {
-  display: inline-block;
-  text-decoration: none;
-  width: 100%;
-  margin: 10px 0;
-  padding: 8px 15px;
-  border-radius: 4px;
-  border: 2px solid #3d2584;
-  color: #ebebf0;
-  background-color: #3d2584;
-}
-@media screen and (min-width: 800px) {
-  .primary-button,
-  a.primary-button {
-    width: auto;
-    margin: 5px;
-  }
-}
-.primary-button:hover,
-a.primary-button:hover {
-  border: 2px outset #3d2584;
-  color: #3d2584;
-  background: none;
-}
-.secondary-button,
-a.secondary-button {
-  display: inline-block;
-  text-decoration: none;
-  width: 100%;
-  margin: 10px 0;
-  padding: 8px 15px;
-  border-radius: 4px;
-  border: 2px solid #a768a1;
-  color: #ebebf0;
-  background-color: #a768a1;
-}
-@media screen and (min-width: 800px) {
-  .secondary-button,
-  a.secondary-button {
-    width: auto;
-    margin: 5px;
-  }
-}
-.secondary-button:hover,
-a.secondary-button:hover {
-  border: 2px outset #a768a1;
-  color: #a768a1;
-  background: none;
-}
-.cancel-button,
-a.cancel-button {
-  display: inline-block;
-  text-decoration: none;
-  width: 100%;
-  margin: 10px 0;
-  padding: 8px 15px;
-  border-radius: 4px;
-  border: 2px solid #b22e5a;
-  color: #ebebf0;
-  background-color: #b22e5a;
-}
-@media screen and (min-width: 800px) {
-  .cancel-button,
-  a.cancel-button {
-    width: auto;
-    margin: 5px;
-  }
-}
-.cancel-button:hover,
-a.cancel-button:hover {
-  border: 2px outset #b22e5a;
-  color: #b22e5a;
-  background: none;
-}
-.confirm-button,
-a.confirm-button {
-  display: inline-block;
-  text-decoration: none;
-  width: 100%;
-  margin: 10px 0;
-  padding: 8px 15px;
-  border-radius: 4px;
-  border: 2px solid #326e5a;
-  color: #ebebf0;
-  background-color: #326e5a;
-}
-@media screen and (min-width: 800px) {
-  .confirm-button,
-  a.confirm-button {
-    width: auto;
-    margin: 5px;
-  }
-}
-.confirm-button:hover,
-a.confirm-button:hover {
-  border: 2px outset #326e5a;
-  color: #326e5a;
-  background: none;
-}
-.image {
-  width: 100%;
-}
-.image img {
-  display: block;
-  width: 90%;
-  margin: 0 auto;
-  border-radius: 4px;
 }
 .light-color {
   color: #ebebf0;
@@ -392,7 +262,7 @@ Responsive boxes & rows
   min-height: 100vh;
   background-color: #ffffff;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .page-section > .container {
     width: 876px;
   }
@@ -417,7 +287,7 @@ Responsive boxes & rows
 .page-section.footer h3 {
   color: #ebebf0;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .mobile-page-section {
     display: flex;
     justify-content: center;
@@ -436,12 +306,12 @@ Responsive boxes & rows
     color: #ebebf0;
   }
 }
-@media screen and (max-width: 500px) and screen and (min-width: 800px) {
+@media screen and (max-width: 700px) and screen and (min-width: 1000px) {
   .mobile-page-section > .container {
     width: 876px;
   }
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
   .tablet-page-section {
     display: flex;
     justify-content: center;
@@ -460,12 +330,12 @@ Responsive boxes & rows
     color: #ebebf0;
   }
 }
-@media screen and (min-width: 500px) and screen and (min-width: 800px) {
+@media screen and (min-width: 700px) and screen and (min-width: 1000px) {
   .tablet-page-section > .container {
     width: 876px;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .desktop-page-section {
     display: flex;
     justify-content: center;
@@ -484,7 +354,7 @@ Responsive boxes & rows
     color: #ebebf0;
   }
 }
-@media screen and (min-width: 800px) and screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) and screen and (min-width: 1000px) {
   .desktop-page-section > .container {
     width: 876px;
   }
@@ -537,204 +407,313 @@ Responsive boxes & rows
 .box-1 {
   width: 8%;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .box-mobile-12 {
     width: 100%;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .box-mobile-11 {
     width: 91%;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .box-mobile-10 {
     width: 83%;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .box-mobile-9 {
     width: 75%;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .box-mobile-8 {
     width: 66%;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .box-mobile-7 {
     width: 58%;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .box-mobile-6 {
     width: 50%;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .box-mobile-5 {
     width: 41%;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .box-mobile-4 {
     width: 33%;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .box-mobile-3 {
     width: 25%;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .box-mobile-2 {
     width: 16%;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .box-mobile-1 {
     width: 8%;
   }
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
   .box-tablet-12 {
     width: 100%;
   }
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
   .box-tablet-11 {
     width: 91%;
   }
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
   .box-tablet-10 {
     width: 83%;
   }
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
   .box-tablet-9 {
     width: 75%;
   }
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
   .box-tablet-8 {
     width: 66%;
   }
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
   .box-tablet-7 {
     width: 58%;
   }
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
   .box-tablet-6 {
     width: 50%;
   }
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
   .box-tablet-5 {
     width: 41%;
   }
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
   .box-tablet-4 {
     width: 33%;
   }
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
   .box-tablet-3 {
     width: 25%;
   }
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
   .box-tablet-2 {
     width: 16%;
   }
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
   .box-tablet-1 {
     width: 8%;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .box-desktop-12 {
     width: 100%;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .box-desktop-11 {
     width: 91%;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .box-desktop-10 {
     width: 83%;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .box-desktop-9 {
     width: 75%;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .box-desktop-8 {
     width: 66%;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .box-desktop-7 {
     width: 58%;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .box-desktop-6 {
     width: 50%;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .box-desktop-5 {
     width: 41%;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .box-desktop-4 {
     width: 33%;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .box-desktop-3 {
     width: 25%;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .box-desktop-2 {
     width: 16%;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .box-desktop-1 {
     width: 8%;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .mobile-hidden {
     display: none;
   }
 }
-@media screen and (min-width: 500px) and (max-width: 800px) {
+@media screen and (min-width: 700px) and (max-width: 1000px) {
   .tablet-hidden {
     display: none;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .desktop-hidden {
     display: none;
   }
 }
-/* ========================================= 
-SPECIFIC OBJECTS
-===========================================*/
+.main-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  background: url('../img/computer.jpg');
+  background-size: cover;
+  border-bottom: 4px solid #333145;
+}
+@media screen and (min-width: 700px) {
+  .main-screen {
+    height: 100%;
+  }
+}
+.main-screen h4,
+.main-screen h5 {
+  color: #645cb3;
+  margin: 25px;
+}
+.main-screen h6 {
+  color: #888888;
+}
+.main-screen hr {
+  margin: 12px auto 36px;
+}
+.main-screen h1 {
+  color: #ebebf0;
+  font-size: 6rem;
+}
+@media screen and (max-width: 700px) {
+  .main-screen h1 {
+    font-size: 6rem;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+  .main-screen h1 {
+    font-size: 8rem;
+  }
+}
+.main-screen.main-screen-layout-2 {
+  align-items: bottom;
+}
+.main-screen.main-screen-layout-2 .image-text-overlay-center {
+  text-align: left;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.main-screen.main-screen-layout-2 .image-text-overlay-center > div {
+  padding: 25px 25px 45px;
+}
+@media screen and (max-width: 700px) {
+  .main-screen.main-screen-layout-2 .image-text-overlay-center {
+    padding: 10px;
+    text-align: center;
+  }
+}
+.main-screen.main-screen-layout-2 .title-hr {
+  margin: 24px 0;
+}
+@media screen and (max-width: 700px) {
+  .main-screen.main-screen-layout-2 .title-hr {
+    margin: 24px auto;
+  }
+}
+.main-screen.main-screen-layout-2 h1 {
+  font-size: 4rem;
+}
+.main-screen.main-screen-layout-2 h4,
+.main-screen.main-screen-layout-2 h5 {
+  margin-top: 10px;
+}
+.title-hr {
+  width: 60%;
+  margin: 36px auto;
+}
+.banner-quote {
+  text-align: center;
+}
+@media screen and (min-width: 1000px) {
+  .banner-quote {
+    padding: 75px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .banner-quote {
+    padding: 25px 0 50px;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+  .banner-quote {
+    padding: 25px 50px 50px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .banner-quote h2 {
+    font-size: 2.5rem;
+  }
+}
+.banner-quote h4 {
+  color: #ebebf0;
+}
+.banner-quote h5 {
+  color: #cecddb;
+}
+.triple-intro h3 {
+  margin-top: 25px;
+}
+.footer h3 {
+  font-family: "Righteous";
+  color: #ebebf0;
+}
 /*
 Top-nav
 //------------------------------
@@ -760,7 +739,7 @@ Collapseable for mobile.
   align-items: center;
   padding: 0 10px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   #top-nav .logo-and-name {
     text-align: right;
     width: 100%;
@@ -776,7 +755,7 @@ Collapseable for mobile.
   font-size: 2.5em;
   color: #ebebf0;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   #top-nav .logo-and-name h2 {
     width: 100%;
     margin: 0;
@@ -788,7 +767,7 @@ Collapseable for mobile.
   font-family: "Righteous";
   color: #ebebf0;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   #top-nav .logo-and-name h3 {
     display: none;
   }
@@ -800,16 +779,20 @@ Collapseable for mobile.
   align-content: space-around;
   flex-wrap: wrap;
   text-align: center;
-  width: 100%;
 }
-@media screen and (min-width: 500px) {
+@media screen and (max-width: 700px) {
+  #top-nav ul {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 700px) {
   #top-nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   #top-nav ul {
     position: absolute;
     top: 50px;
@@ -820,7 +803,7 @@ Collapseable for mobile.
 #top-nav ul li {
   width: 100%;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
   #top-nav ul li {
     width: auto;
   }
@@ -830,11 +813,12 @@ Collapseable for mobile.
   padding: 15px;
   width: 100%;
   color: #a6a2d3;
-  font-family: "Oswald";
+  font-family: "Armata";
+  font-weight: bold;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   #top-nav ul li a {
-    background-color: rgba(29, 28, 39, 0.7);
+    background-color: rgba(29, 28, 39, 0.95);
   }
 }
 #top-nav.top-nav-transparent {
@@ -845,87 +829,104 @@ Collapseable for mobile.
 #top-nav.top-nav-transparent h2 {
   text-shadow: -1px -1px 0 #645cb3, 1px -1px 0 #645cb3, -1px 1px 0 #645cb3, 1px 1px 0 #1d1c27;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   #top-nav.top-nav-transparent a {
-    background-color: rgba(29, 28, 39, 0.7);
+    background-color: rgba(235, 235, 240, 0.95);
     text-shadow: -1px -1px 0 #645cb3, 1px -1px 0 #645cb3, -1px 1px 0 #645cb3, 1px 1px 0 #1d1c27;
   }
 }
-.main-screen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh;
-  background: url('../img/computer.jpg');
-  background-size: cover;
-  border-bottom: 4px solid #333145;
+.form-colors {
+  background-color: transparent;
+  border: 2px solid #3d2584;
+  font-family: "Armata";
 }
-@media screen and (min-width: 500px) {
-  .main-screen {
-    height: 100%;
-  }
+.block-form {
+  background-color: transparent;
+  border: 2px solid #3d2584;
+  font-family: "Armata";
+  width: 100%;
+  padding: 10px;
+  margin: 5px 10px 20px;
+  border-radius: 4px;
+  display: block;
 }
-.main-screen h4,
-.main-screen h5 {
-  color: #645cb3;
-  margin: 25px;
+.block-form:hover {
+  outline: 1px solid #cecddb;
 }
-.main-screen h6 {
-  color: #888888;
+.block-form:focus {
+  outline-color: #ebebf0;
+  outline-width: 2px;
+  background-color: rgba(235, 235, 240, 0.7);
+  font-weight: bold;
 }
-.main-screen h1 {
-  color: #ebebf0;
-  font-size: 6rem;
+input[type=text] {
+  background-color: transparent;
+  border: 2px solid #3d2584;
+  font-family: "Armata";
+  width: 100%;
+  padding: 10px;
+  margin: 5px 10px 20px;
+  border-radius: 4px;
+  display: block;
 }
-@media screen and (max-width: 500px) {
-  .main-screen h1 {
-    font-size: 6rem;
-  }
+input[type=text]:hover {
+  outline: 1px solid #cecddb;
 }
-@media screen and (min-width: 500px) and (max-width: 800px) {
-  .main-screen h1 {
-    font-size: 8rem;
-  }
+input[type=text]:focus {
+  outline-color: #ebebf0;
+  outline-width: 2px;
+  background-color: rgba(235, 235, 240, 0.7);
+  font-weight: bold;
 }
-.main-screen.main-screen-layout-2 {
-  align-items: bottom;
+input[type=submit] {
+  font-family: "Oswald";
 }
-.main-screen.main-screen-layout-2 .image-text-overlay-center {
-  text-align: left;
-  justify-content: flex-start;
-  align-items: flex-end;
+select {
+  background-color: transparent;
+  border: 2px solid #3d2584;
+  font-family: "Armata";
+  width: 100%;
+  padding: 10px;
+  margin: 5px 10px 20px;
+  border-radius: 4px;
+  display: block;
 }
-.main-screen.main-screen-layout-2 .image-text-overlay-center > div {
-  padding: 25px 25px 45px;
+select:hover {
+  outline: 1px solid #cecddb;
 }
-@media screen and (max-width: 500px) {
-  .main-screen.main-screen-layout-2 .image-text-overlay-center {
-    padding: 10px;
-    text-align: center;
-  }
+select:focus {
+  outline-color: #ebebf0;
+  outline-width: 2px;
+  background-color: rgba(235, 235, 240, 0.7);
+  font-weight: bold;
 }
-.main-screen.main-screen-layout-2 .title-hr {
-  margin: 24px 0;
+textarea {
+  background-color: transparent;
+  border: 2px solid #3d2584;
+  font-family: "Armata";
+  width: 100%;
+  padding: 10px;
+  margin: 5px 10px 20px;
+  border-radius: 4px;
+  display: block;
 }
-@media screen and (max-width: 500px) {
-  .main-screen.main-screen-layout-2 .title-hr {
-    margin: 24px auto;
-  }
+textarea:hover {
+  outline: 1px solid #cecddb;
 }
-.main-screen.main-screen-layout-2 h1 {
-  font-size: 4rem;
+textarea:focus {
+  outline-color: #ebebf0;
+  outline-width: 2px;
+  background-color: rgba(235, 235, 240, 0.7);
+  font-weight: bold;
 }
-.main-screen.main-screen-layout-2 h4,
-.main-screen.main-screen-layout-2 h5 {
-  margin-top: 10px;
+.image {
+  width: 100%;
 }
-.title-hr {
-  width: 60%;
-  margin: 36px auto;
-}
-hr {
-  margin: 12px auto 36px;
+.image img {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 4px;
 }
 .image-text-overlay-center {
   display: flex;
@@ -938,38 +939,6 @@ hr {
 }
 .image-text-overlay-center a.primary-button:hover {
   color: #ebebf0;
-}
-.banner-quote {
-  text-align: center;
-}
-@media screen and (min-width: 800px) {
-  .banner-quote {
-    padding: 75px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .banner-quote {
-    padding: 25px 0 50px;
-  }
-}
-@media screen and (min-width: 500px) and (max-width: 800px) {
-  .banner-quote {
-    padding: 25px 50px 50px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .banner-quote h2 {
-    font-size: 2.5rem;
-  }
-}
-.banner-quote h4 {
-  color: #ebebf0;
-}
-.banner-quote h5 {
-  color: #cecddb;
-}
-.triple-intro h3 {
-  margin-top: 25px;
 }
 .image-overlay {
   display: flex;
@@ -1180,6 +1149,134 @@ hr {
   width: 100%;
   border-radius: 0;
 }
+.default-button,
+a.default-button {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px 15px;
+  border-radius: 4px;
+  border: 2px solid #ebebf0;
+  color: #1d1c27;
+  background-color: #ebebf0;
+}
+@media screen and (min-width: 1000px) {
+  .default-button,
+  a.default-button {
+    width: auto;
+    margin: 5px;
+  }
+}
+.default-button:hover,
+a.default-button:hover {
+  border: 2px outset #ebebf0;
+  color: #ebebf0;
+  background: none;
+}
+.primary-button,
+a.primary-button {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px 15px;
+  border-radius: 4px;
+  border: 2px solid #3d2584;
+  color: #ebebf0;
+  background-color: #3d2584;
+}
+@media screen and (min-width: 1000px) {
+  .primary-button,
+  a.primary-button {
+    width: auto;
+    margin: 5px;
+  }
+}
+.primary-button:hover,
+a.primary-button:hover {
+  border: 2px outset #3d2584;
+  color: #3d2584;
+  background: none;
+}
+.secondary-button,
+a.secondary-button {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px 15px;
+  border-radius: 4px;
+  border: 2px solid #a768a1;
+  color: #ebebf0;
+  background-color: #a768a1;
+}
+@media screen and (min-width: 1000px) {
+  .secondary-button,
+  a.secondary-button {
+    width: auto;
+    margin: 5px;
+  }
+}
+.secondary-button:hover,
+a.secondary-button:hover {
+  border: 2px outset #a768a1;
+  color: #a768a1;
+  background: none;
+}
+.cancel-button,
+a.cancel-button {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px 15px;
+  border-radius: 4px;
+  border: 2px solid #b22e5a;
+  color: #ebebf0;
+  background-color: #b22e5a;
+}
+@media screen and (min-width: 1000px) {
+  .cancel-button,
+  a.cancel-button {
+    width: auto;
+    margin: 5px;
+  }
+}
+.cancel-button:hover,
+a.cancel-button:hover {
+  border: 2px outset #b22e5a;
+  color: #b22e5a;
+  background: none;
+}
+.confirm-button,
+a.confirm-button {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px 15px;
+  border-radius: 4px;
+  border: 2px solid #326e5a;
+  color: #ebebf0;
+  background-color: #326e5a;
+}
+@media screen and (min-width: 1000px) {
+  .confirm-button,
+  a.confirm-button {
+    width: auto;
+    margin: 5px;
+  }
+}
+.confirm-button:hover,
+a.confirm-button:hover {
+  border: 2px outset #326e5a;
+  color: #326e5a;
+  background: none;
+}
+/* ========================================= 
+SPECIFIC OBJECTS
+===========================================*/
 .well {
   padding: 10px;
   width: 100%;
@@ -1187,98 +1284,6 @@ hr {
   border-radius: 4px;
   border: 1px solid #1d1c27;
   background-color: #cecddb;
-}
-.subtext {
-  display: block;
-  font-size: 80%;
-}
-.form-colors {
-  background-color: transparent;
-  border: 2px solid #3d2584;
-  font-family: "Armata";
-}
-.block-form {
-  background-color: transparent;
-  border: 2px solid #3d2584;
-  font-family: "Armata";
-  width: 100%;
-  padding: 10px;
-  margin: 5px 10px 20px;
-  border-radius: 4px;
-  display: block;
-}
-.block-form:hover {
-  outline: 1px solid #cecddb;
-}
-.block-form:focus {
-  outline-color: #ebebf0;
-  outline-width: 2px;
-  background-color: rgba(235, 235, 240, 0.7);
-  font-weight: bold;
-}
-input[type=text] {
-  background-color: transparent;
-  border: 2px solid #3d2584;
-  font-family: "Armata";
-  width: 100%;
-  padding: 10px;
-  margin: 5px 10px 20px;
-  border-radius: 4px;
-  display: block;
-}
-input[type=text]:hover {
-  outline: 1px solid #cecddb;
-}
-input[type=text]:focus {
-  outline-color: #ebebf0;
-  outline-width: 2px;
-  background-color: rgba(235, 235, 240, 0.7);
-  font-weight: bold;
-}
-input[type=submit] {
-  font-family: "Oswald";
-}
-select {
-  background-color: transparent;
-  border: 2px solid #3d2584;
-  font-family: "Armata";
-  width: 100%;
-  padding: 10px;
-  margin: 5px 10px 20px;
-  border-radius: 4px;
-  display: block;
-}
-select:hover {
-  outline: 1px solid #cecddb;
-}
-select:focus {
-  outline-color: #ebebf0;
-  outline-width: 2px;
-  background-color: rgba(235, 235, 240, 0.7);
-  font-weight: bold;
-}
-textarea {
-  background-color: transparent;
-  border: 2px solid #3d2584;
-  font-family: "Armata";
-  width: 100%;
-  padding: 10px;
-  margin: 5px 10px 20px;
-  border-radius: 4px;
-  display: block;
-}
-textarea:hover {
-  outline: 1px solid #cecddb;
-}
-textarea:focus {
-  outline-color: #ebebf0;
-  outline-width: 2px;
-  background-color: rgba(235, 235, 240, 0.7);
-  font-weight: bold;
-}
-.footer h3 {
-  font-family: "Righteous";
-  color: #ebebf0;
 }
 .example-boxes div {
   text-align: center;

@@ -140,6 +140,10 @@ p {
     .set-font-styles(@main-text-font, 1rem, @main-text-color, 5px 0, 1.5); 
 }
 
+.subtext {
+	display:block;
+	font-size:80%;
+}
 
 //***************************
 //      Links
@@ -153,74 +157,7 @@ a {
     &:hover {color:@link-hover;}
 }
 
-
-//***************************
-//      BUTTONS
-//***************************
-.button(@color, @background) {
-    display: inline-block;
-    text-decoration: none;
-	width: 100%;
-	margin: 10px 0;
-	@media @desktop {
-		width: auto; 
-		margin: 5px;
-	}
-	padding: 8px 15px;
-    border-radius: @default-border-radius;
-    
-    border: 2px solid @background;
-    color: @color;
-    background-color: @background;
-    
-    &:hover {
-        border: 2px outset @background;
-        color: @background;
-        background: none;
-        
-    }
-
-}
-
-//Double declarations for specificity on anchor tag.
-.default-button, a.default-button {
-	.button(@default-button-text-color, @default-button-bg-color);
-}
-
-.primary-button, a.primary-button {
-    .button(@primary-button-text-color, @primary-button-bg-color);
-}
-
-.secondary-button, a.secondary-button {
-    .button(@secondary-button-text-color, @secondary-button-bg-color);
-}
-
-.cancel-button, a.cancel-button {
-    .button(@cancel-button-text-color, @cancel-button-bg-color);
-}
-
-.confirm-button, a.confirm-button {
-    .button(@confirm-button-text-color, @confirm-button-bg-color);
-}
-
-
-
-
-
-
-
-//***************************
-//      BUTTONS
-//***************************
-.image {
-    width: 100%;
-    img {
-        display:block;
-        width:90%;
-        margin: 0 auto;
-        border-radius: @default-border-radius;
-    }
-} 
+ 
 
 
 
