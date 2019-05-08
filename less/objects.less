@@ -9,8 +9,8 @@ Collapseable for mobile.
 */
 #top-nav {
 	.inline-flex;
-	//Fix menu bar to top if >= tablet
-	@media @tablet {position: fixed;}
+	position: fixed;
+	top:0;
     width: 100%;
 	background-image: linear-gradient(lighten(@nav-bg-color, 15%), darken(@nav-bg-color, 5%), @nav-bg-color, lighten(@nav-bg-color, 5%) ); 
 	border-bottom: 2px outset @dark-color;
@@ -20,14 +20,27 @@ Collapseable for mobile.
 
 	.logo-and-name {
 		.inline-flex;
+		padding: 0 10px;
+		@media @mobile { text-align:right;width:100%;}
+
 		span {
 			height: 36px;
 			margin: 0 5px 0 15px;
 		}
+		h2 {
+			display:none;
+			@media @mobile {
+				width:100%; margin:0;
+				display:inline-block;
+			}
+		}
 		h3 {
+			display:inline-block;
 			font-family: @unique-text-font;
 			color: @nav-title-color;
+			@media @mobile { display:none; }
 		}
+
 	}
 
 	ul{
@@ -35,10 +48,11 @@ Collapseable for mobile.
 		text-align: center;
 		//change to inline flex if >= tablet
 		@media @tablet {.inline-flex;}
+		@media @mobile {position: absolute; top:50px; right:0; display:none;}
 		li {
 			width:100%; 
 			//only make 100px if >= tablet
-			@media @tablet{width: auto;}
+			@media @tablet { width: auto;}
 			a {
 				display: block;
 				padding: 20px;
@@ -53,6 +67,21 @@ Collapseable for mobile.
 #top-nav.top-nav-transparent {
 	background:none;
 	border-color:transparent;
+	h3, h2 {
+		text-shadow:
+		-1px -1px 0 @main-color,
+		1px -1px 0 @main-color,
+		-1px 1px 0 @main-color,
+		1px 1px 0 @dark-color;
+	}
+	a {@media @mobile {background-color:@transparent-dark-color;
+		text-shadow:
+		-1px -1px 0 @main-color,
+		1px -1px 0 @main-color,
+		-1px 1px 0 @main-color,
+		1px 1px 0 @dark-color;
+	}
+}
 }
 
 //Main Screen
@@ -62,7 +91,8 @@ Collapseable for mobile.
 //Set bg img easily in styles.less
 .main-screen {
 	.abs-center-flex;
-	height: 100vh;
+	@media @tablet {height:100%;}
+	min-height: 100vh;
 	background: @main-bg-img-link;
 	background-size: cover;
 	border-bottom: 4px solid @light-dark-color;
@@ -85,9 +115,13 @@ Collapseable for mobile.
 		text-align:left;
 		justify-content: flex-start;
 		align-items:flex-end;
-		padding:0 0 45px 25px;
+		& > div { padding:25px 25px 45px; }
+		@media @mobile {
+			padding: 10px;text-align:center;
+		}
 	}
-	.title-hr {margin:24px 0;}
+	.title-hr {margin:24px 0; 
+		@media @mobile {margin:24px auto;} }
 	h1 { font-size: 4rem; }
 	h4, h5 {margin-top:10px;}
 	a{}

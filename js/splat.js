@@ -4,6 +4,13 @@ $('document').ready(function () {
     scrollLinks();
     neatImageOverlay();
 
+    var menuButton = document.getElementById('menu-button');
+    menuButton.addEventListener('click', (e)=> {
+        $('#menu-list').slideToggle();
+    });
+    
+
+
 });
 
 function neatImageOverlay() {

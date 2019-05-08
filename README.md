@@ -1,23 +1,15 @@
 Splat
 
 v.9.1
-change splat.js to raw js (remove jquery)
-
-
+php form to email stuff
+Update js to look for screen size change
 
 Version One
 [ ] HTML template sections for content
     ( ) Content
-    [ ] Contact Form
-    [ ] Gallery
     [ ] One basic stat/chart design
-[ ] JQuery
-    ( ) page sliding
-    ( ) mobile menu collapse
-    ( ) neat ReSize window for neat-img-overlay
 [ ] Misc
     ( ) Fleshed out color support for most things (grey-well, main-well, etc.)
-    ( ) 
 
 ^ Complete first ^
 
