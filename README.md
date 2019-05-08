@@ -2,7 +2,7 @@ Splat
 
 v.9.1
 php form to email stuff
-Update js to look for screen size change
+click off menu
 
 Version One
 [ ] HTML template sections for content

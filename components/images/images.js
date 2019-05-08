@@ -1,3 +1,7 @@
+function initiateImages(){
+    neatImageOverlay();
+}
+
 function neatImageOverlay() {
     var neatImages = document.getElementsByClassName('neat-img-overlay');
     for (let i = 0; i < neatImages.length; i++) {

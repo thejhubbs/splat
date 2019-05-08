@@ -10,6 +10,7 @@
 @import "variables";
 @import "mixins";
 
+//Load components
 @import "../components/responsive/responsive";
 @import "../components/template/template";
 @import "../components/menus/menus";
@@ -17,29 +18,10 @@
 @import "../components/images/images";
 @import "../components/buttons/buttons";
 
-//Individual styling for largely reusable html elements,
-//Like navbars and sections.
+//Random components (wells)
 @import "objects";
 
 //Specific styling for each individual instance of project,
 //your own needs.
 @import "home";
 
-
-//-------------
-//INDIVIDUAL PROJECT LESS
-//Insert code specific to your site & overrides here.
-//-------------
-.example-boxes {
-    div {
-        text-align: center;
-        background-color: @dark-light-color;
-        padding:1%;
-        margin: 5px 0;
-        border: @default-border;
-        border-radius: @default-border-radius;
-    }
-}
-.example-image img {
-    width:100%;
-}
