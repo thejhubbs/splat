@@ -2,7 +2,6 @@ Splat
 
 v.9.2
 php form to email stuff
-click off menu
 
 To Come
 [ ] HTML template sections for content

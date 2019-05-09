@@ -4,9 +4,13 @@ function initiateMenus() {
 }
 
 function menuToggle() {
-    var menuButton = document.getElementById('menu-button');
-    menuButton.addEventListener('click', (e)=> {
-        $('#menu-list').slideToggle();
+    $('body').click((e)=>{    
+        //If its the menu button being clicked, toggle the menu, otherwise close it
+        if(e.target.id == "menu-button") {
+            $('#menu-list').slideToggle();
+        } else {
+            $('#menu-list').slideUp();
+        }
     });
 }
 
