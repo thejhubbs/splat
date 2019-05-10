@@ -589,17 +589,17 @@ Responsive boxes & rows
 }
 @media screen and (max-width: 700px) {
   .mobile-hidden {
-    display: none;
+    display: none !important;
   }
 }
 @media screen and (min-width: 700px) and (max-width: 1000px) {
   .tablet-hidden {
-    display: none;
+    display: none !important;
   }
 }
 @media screen and (min-width: 1000px) {
   .desktop-hidden {
-    display: none;
+    display: none !important;
   }
 }
 .main-screen {

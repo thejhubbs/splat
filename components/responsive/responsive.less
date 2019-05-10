@@ -73,7 +73,7 @@ each(range(12), {
 	.box-desktop-@{num} { @media @desktop { width: ~"@{percent}%"; } }
 });
 
-//TARGET HIDDEN
-.mobile-hidden {@media @mobile {display:none;} }
-.tablet-hidden {@media @hard-tablet {display:none;} }
-.desktop-hidden {@media @desktop {display:none;} }
+//TARGET HIDDEN- important used because these clases should -always- override others
+.mobile-hidden {@media @mobile {display:none !important;} }
+.tablet-hidden {@media @hard-tablet {display:none !important;} }
+.desktop-hidden {@media @desktop {display:none !important;} }

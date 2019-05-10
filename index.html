@@ -21,6 +21,7 @@
   <script src="components/images/images.js"></script>
   <script src="components/responsive/responsive.js"></script>
   <script src="components/template/template.js"></script>
+  <script src="components/accordions/accordions.js"></script>
 
   <script src="js/splat.js"></script>
 
@@ -38,13 +39,23 @@
       <h2><span id="menu-button" class="fas fa-tint"></span></h2><h3><span class="fas fa-tint"></span> Splat</h3>
     </div>
 
-    <ul id="menu-list">
+    <ul class="tablet-hidden desktop-hidden" id="menu-list">
       <li><a class="scroll" href="#top">Top</a></li>
       <li><a class="scroll" href="#intro">Overview</a></li>
       <li><a class="scroll" href="#features">Responsive Design</a></li>
       <li><a class="scroll" href="#styles">Styles</a></li>
       <li><a class="scroll" href="#download">Download</a></li>
     </ul>
+    
+    <ul class="mobile-hidden">
+      <li><a class="scroll" href="#top">Top</a></li>
+      <li><a class="scroll" href="#intro">Overview</a></li>
+      <li><a class="scroll" href="#features">Responsive Design</a></li>
+      <li><a class="scroll" href="#styles">Styles</a></li>
+      <li><a class="scroll" href="#download">Download</a></li>
+    </ul>
+
+
   </nav>
 
   <header id="top" class="main-screen">
@@ -244,9 +255,9 @@
       <div class="container">
         <div class="row">
           <div class="box-12">
-            <h2>Styles</h2>
+            <h2>Components</h2>
           </div>
-          <div class="box-12">
+          <div class="box-12 accordion">
             <h3>Buttons</h3>
             <section class="well">
               <a href="#" class="default-button">Default</a>
@@ -257,7 +268,7 @@
             </section>
           </div>
 
-          <div class="box-12">
+          <div class="box-12 accordion">
             <h3>Headers</h3>
             <section class="well">
               <h1>Top Header</h1>
@@ -272,35 +283,8 @@
           </div>
 
 
-          <div class="box-12">
+          <div class="box-12 accordion">
             <h3>Images</h3>
-            <section class="well">
-              <div class="row">
-
-
-
-                <div class="box-12 box-tablet-6">
-                  <h5>Before</h5>
-                  <p>This is an image put in without the .image div.</p>
-                  <!--CODE-->
-                  <div class='example-image'><img src="img/smoke.jpg" /></div>
-                  <!--CODE-->
-                </div>
-
-
-                <div class="box-12 box-tablet-6">
-                  <h5>Default</h5>
-                  <p>Surrounded by .image div, sets small margin and border radius, centers.</p>
-                  <!--CODE-->
-                  <div class='image'><img src="img/smoke.jpg" /></div>
-                  <!--CODE-->
-                </div>
-
-              </div>
-            </section>
-            
-
-            <h4>Overlays</h4>
             <section class="well">
                 <p>Surrounded by .neat-img-overlay and with an empty div immediately prior to the image tag. </p>
               <div class="row">
@@ -344,8 +328,10 @@
 
               </div>
             </section>
+          </div>
 
-          <h4>Image boxes</h4>
+          <div class="box-12 accordion">
+            <h3>Image boxes</h3>
             <section class="well">
               <div class="row">
 
@@ -388,8 +374,22 @@
             </section>
           </div>
 
-          <div class="box-12">
-            <h3>Misc.</h3>
+          <div class="box-12 accordion">
+            <h3>Forms</h3>
+            <section class="well">
+              <form>  
+                <input type="text" />
+                <input type="radio" />
+                <input type="radio" />
+                <input type="radio" />
+                <select><option>1</option><option>2</option><option>3</option></select>
+                <textarea></textarea>
+              </form>
+            </section>
+          </div>
+
+          <div class="box-12 accordion">
+            <h3>Miscellanious</h3>
             <section class="well">
               <section class="well">Wells</section>
             </section>
@@ -411,30 +411,59 @@
       <div class="container">
         <div class="row">
           <div class="box-12">
-            <h2>Objects</h2>
+            <h2>Customization & Objects</h2>
           </div>
 
-          <div class="box-12">
+          <div class="box-6">
             <h3>Menu Bar</h3>
-            <p>Transparent</p>
+            <p>3 Different Styles of Menu Bars- Dark, Transparent, and Colorful</p>
           </div>
           
-          <div class="box-12">
+          <div class="box-6">
             <h3>Call to Action</h3>
-            <p>Layout 2</p>          
+            <p>3 Different Layouts- Completely Centered, Lower Left, and Middle Right</p>          
           </div>
           
-          <div class="box-12">
+          <div class="box-6">
             <h3>Page Sections</h3>
-            <p>triple intro, contact</p>          
+            <p>Triple Column Intro, Contact, Portfolios, Quotes, And More</p>          
           </div>
 
-          <div class="box-12">
-            <h3>PreLayouts</h3>
-            <p>Profile</p>
+          <div class="box-6">
+            <h3>3 Different Layouts to Start From</h3>
+            <p>Profile, Business, and Product</p>
           </div>
         </div>
       </div>
+    </div>
+
+    <div id="contact" class="page-section">
+      <div class="container">
+        <div class="row">
+          <div class="box-12">
+            <h2>Contact</h2>
+            <form action="contact.php" method="POST">
+              Name: <input type="text" name="name">
+
+              Email: <input type="text" name="email">
+              
+              Reason for Contact: <select name="reason">
+                <option>Freelance Design</option>
+                <option>Freelance Design</option>
+                <option>Freelance Design</option>
+              </select>
+              
+              Message: <textarea name="message"></textarea>
+              
+              <input type="submit" class="primary-button">
+            
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
 
     <div id="download" class="page-section">
@@ -443,11 +472,12 @@
           <div class="box-12 box-desktop-6">
             <h2>Download & Install</h2>
             <ol>
-              <li>Fork/clone git</li>
-              <li>Edit styles.less to change colors & fonts</li>
-              <li>Edit index.html to change text and layout</li>
-              <li>Compile less files (or set up less-watch)</li>
-              <li>Run!</li>
+              <li>1. Fork/clone git</li>
+              <li>2. Choose which layout you'd like to use, and rename as index.html</li>
+              <li>3. Arrange Components, Objects & Texts</li>
+              <li>4. Edit styles.less to change colors & fonts</li>
+              <li>5. Compile less files (or set up less-watch)</li>
+              <li>6. Visit!</li>
             </ol>
           </div>
           <div class="box-12 box-desktop-6">
@@ -455,7 +485,7 @@
             <a href="#" class="primary-button">Github link</a><br />
             <a href="#" class="default-button">Checkout My Other Work <span class="fas fa-server"></span></a><br />
             <a href="#" class="default-button">Hire Me To Design Yours <span class="fas fa-user-tie"></span></a>
-
+            <h3>Separate JS/Less files for incorporating into your own project coming soon</h3>
 
           </div>
 

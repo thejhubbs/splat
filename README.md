@@ -2,6 +2,11 @@ Splat
 
 v.9.2
 php form to email stuff
+ajax to load  
+accordians
+links
+outline-radius? for forms
+
 
 To Come
 [ ] HTML template sections for content
