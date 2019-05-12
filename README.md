@@ -1,14 +1,15 @@
 Splat
 
 v.9.2
+BACKEND
 php form to email stuff
 ajax to load  
-accordians
+
+FRONTEND
 links
 outline-radius? for forms
 
-accordion depth- make accordion-group to allow one open in them  
-
+SERVER/MAINTAIN
 
 To Come
 [ ] HTML template sections for content

@@ -1,22 +1,53 @@
 class Accordion {
     constructor(element) {
         this.accordionGroup = $(element);
-        this.accordions = this.accordionGroup.contents('.accordion');
-        this.accordionSections = this.accordionGroup.find('section');
-
-        this.accordions.click((e) => {
-            this.accordionSections.slideUp();        
-            $(e.target).parent().contents('section').slideToggle();
+        this.accordions = Array.from(this.accordionGroup.contents('.accordion'));
+        this.accordionTabs = [];
+        this.accordions.forEach( (item) => {
+            this.accordionTabs.push( new AccordionTab(item, this) ) 
         });
     }
 
-    
+    hideAll(){
+        this.accordionTabs.forEach((item) => {
+            item.toggleHide();
+            item.print();
+        });
+    }
+}
+
+class AccordionTab {
+    constructor(element, parent){
+        this.parent = parent;
+        this.accordion = $(element);
+        this.heading = this.accordion.contents('h3');
+        this.section = this.accordion.find('section');
+        this.showing = this.accordion.data('show');
+
+        if (!this.showing) { this.section.hide(); }
+        this.print();
+
+        this.heading.click((e) => {
+            var toggle = !this.showing
+            this.parent.hideAll();
+            this.showing = toggle;
+            this.print();
+        });
+    }
+
+    print() {
+        if(this.showing == true) { this.section.slideDown(); }
+        else { this.section.slideUp(); }
+    }
+
+    toggleHide() {
+        this.showing = false;
+    }
 
 }
 
 function initiateAccordions(){
-    //Eventually allow for preshow option
-    $('.accordion section').slideUp();    
+     
 
     Array.from($('.accordion-group')).forEach((item) => { new Accordion(item) });
 
