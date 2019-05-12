@@ -21,7 +21,7 @@ class AccordionTab {
         this.parent = parent;
         this.accordion = $(element);
         this.heading = this.accordion.contents('h3');
-        this.section = this.accordion.find('section');
+        this.section = this.accordion.children('section');
         this.showing = this.accordion.data('show');
 
         if (!this.showing) { this.section.hide(); }
