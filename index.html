@@ -28,15 +28,16 @@
 
 
 
-    <!--[if lt IE 9]>
+  <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
 
 <body>
-  <nav id="top-nav" class='top-nav-colorful'>
+  <nav id="top-nav" class='top-nav'>
     <div class="logo-and-name">
-      <h2><span id="menu-button" class="fas fa-tint"></span></h2><h3><span class="fas fa-tint"></span> Splat</h3>
+      <h2><span id="menu-button" class="fas fa-tint"></span></h2>
+      <h3><span class="fas fa-tint"></span> Splat</h3>
     </div>
 
     <ul class="tablet-hidden desktop-hidden" id="menu-list">
@@ -46,7 +47,7 @@
       <li><a class="scroll" href="#styles">Styles</a></li>
       <li><a class="scroll" href="#download">Download</a></li>
     </ul>
-    
+
     <ul class="mobile-hidden">
       <li><a class="scroll" href="#top">Top</a></li>
       <li><a class="scroll" href="#intro">Overview</a></li>
@@ -109,7 +110,8 @@
                 <img src="img/smoke.jpg" />
               </div>
               <h3>Customizeable Design</h3>
-              <p>Drastically & quickly change the appearance of the template by changing fonts, styles, and other things like border radius all from an easy file.</p>
+              <p>Drastically & quickly change the appearance of the template by changing fonts, styles, and other things
+                like border radius all from an easy file.</p>
               <a href="#" class="default-button">See Full List</a>
             </div>
           </div>
@@ -121,7 +123,8 @@
                 <img src="img/network.jpg" />
               </div>
               <h3>Colorize</h3>
-              <p>All colors you see now are generated from one "main" color. Choose yours and instantly theme all other colors to match. Of course, these generations are easily overrideable for the designers out there.</p>
+              <p>All colors you see now are generated from one "main" color. Choose yours and instantly theme all other
+                colors to match. Of course, these generations are easily overrideable for the designers out there.</p>
 
               <a href="#" class="default-button">See Examples</a>
             </div>
@@ -135,7 +138,8 @@
 
               </div>
               <h3>Reusable HTML</h3>
-              <p>Standard 12 column (boxes) responsive design, including classes to hide and display at breakpoints. Comes with a plethora of HTML objects to use as you see fit.</p>
+              <p>Standard 12 column (boxes) responsive design, including classes to hide and display at breakpoints.
+                Comes with a plethora of HTML objects to use as you see fit.</p>
 
               <a href="#" class="default-button">See Features</a>
             </div>
@@ -257,151 +261,300 @@
           <div class="box-12">
             <h2>Components</h2>
           </div>
-          <div class="box-12 accordion">
-            <h3>Buttons</h3>
-            <section class="well">
-              <a href="#" class="default-button">Default</a>
-              <a href="#" class="primary-button">Primary</a>
-              <a href="#" class="secondary-button">Secondary</a>
-              <a href="#" class="cancel-button">Cancel</a>
-              <a href="#" class="confirm-button">Accept</a>
-            </section>
-          </div>
 
-          <div class="box-12 accordion">
-            <h3>Headers</h3>
-            <section class="well">
-              <h1>Top Header</h1>
-              <h2>Main Header</h2>
-              <h3>Section Header</h3>
-              <h4>Title</h4>
-              <h5>Significance</h5>
-              <h6>Notes</h6>
-              <p>Paragraph Tags</p>
-              <a href="#">Links</a>
-            </section>
-          </div>
+          <div class="accordion-group">
+
+            <div class="box-12 accordion">
+              <h3>Buttons</h3>
+              <section class="well">
+                <a href="#" class="default-button">Default</a>
+                <a href="#" class="primary-button">Primary</a>
+                <a href="#" class="secondary-button">Secondary</a>
+                <a href="#" class="cancel-button">Cancel</a>
+                <a href="#" class="confirm-button">Accept</a>
+              </section>
+            </div>
+
+            <div class="box-12 accordion">
+              <h3>Headers</h3>
+              <section class="well">
+                <h1>Top Header</h1>
+                <h2>Main Header</h2>
+                <h3>Section Header</h3>
+                <h4>Title</h4>
+                <h5>Significance</h5>
+                <h6>Notes</h6>
+                <p>Paragraph Tags</p>
+                <a href="#">Links</a>
+              </section>
+            </div>
 
 
-          <div class="box-12 accordion">
-            <h3>Images</h3>
-            <section class="well">
+            <div class="box-12 accordion">
+              <h3>Images</h3>
+              <section class="well">
                 <p>Surrounded by .neat-img-overlay and with an empty div immediately prior to the image tag. </p>
-              <div class="row">
-                <div class="box-12 box-tablet-6 box-desktop-4">
-                  <h5>Light Overlay</h5>
-                  <p>Adds a slight, transparent overlay.</p>
-                  <!--CODE-->
-                  <div class='light-img-overlay'>
-                    <div></div>
-                    <!--Necessary empty div for overlay-->
-                    <img src="img/smoke.jpg" />
+                <div class="row">
+                  <div class="box-12 box-tablet-6 box-desktop-4">
+                    <h5>Light Overlay</h5>
+                    <p>Adds a slight, transparent overlay.</p>
+                    <!--CODE-->
+                    <div class='light-img-overlay'>
+                      <div></div>
+                      <!--Necessary empty div for overlay-->
+                      <img src="img/smoke.jpg" />
+                    </div>
+                    <!--CODE-->
                   </div>
-                  <!--CODE-->
+
+
+                  <div class="box-12 box-tablet-6 box-desktop-4">
+                    <h5>Color Overlay</h5>
+                    <p>Adds a slight overlay of the main color.</p>
+                    <!--CODE-->
+                    <div class='color-img-overlay'>
+                      <div></div>
+                      <!--Necessary empty div for overlay-->
+                      <img src="img/smoke.jpg" />
+                    </div>
+                    <!--CODE-->
+                  </div>
+
+                  <div class="box-12 box-tablet-6 box-desktop-4">
+                    <h5>Neat Overlay</h5>
+                    <p>Set height and "cover" for "neatness".</p>
+                    <!--CODE-->
+                    <div class='neat-img-overlay'>
+                      <div></div>
+                      <!--Necessary empty div for overlay-->
+                      <img src="img/smoke.jpg" />
+                    </div>
+                    <!--CODE-->
+                  </div>
+
+
+                </div>
+              </section>
+            </div>
+
+            <div class="box-12 accordion">
+              <h3>Image boxes</h3>
+              <section class="well">
+                <div class="row">
+
+                  <div class="box-12 box-tablet-6 box-desktop-4">
+                    <h5>Above and below</h5>
+                    <p>A title and an attribution.</p>
+                    <!--CODE-->
+                    <div class='image-attribution-box'>
+                      <h4>Optional Title</h4>
+                      <img src="img/smoke.jpg" />
+                      <h6>Optional Attribution or description goes here.</h6>
+                    </div>
+                    <!--CODE-->
+                  </div>
+
+                  <div class="box-12 box-tablet-6 box-desktop-4">
+                    <h5>Just a Title</h5>
+                    <p>A quick description</p>
+                    <!--CODE-->
+                    <div class='light-image-attribution-box'>
+                      <h4>Optional Title</h4>
+                      <img src="img/smoke.jpg" />
+                    </div>
+                    <!--CODE-->
+                  </div>
+
+                  <div class="box-12 box-tablet-6 box-desktop-4">
+                    <h5>Main Color</h5>
+                    <p>A highlight or primary image.</p>
+                    <!--CODE-->
+                    <div class='main-image-attribution-box'>
+                      <img src="img/smoke.jpg" />
+                      <h6>Optional Attribution or description goes here.</h6>
+                    </div>
+                    <!--CODE-->
+                  </div>
+
                 </div>
 
+              </section>
+            </div>
 
-                <div class="box-12 box-tablet-6 box-desktop-4">
-                  <h5>Color Overlay</h5>
-                  <p>Adds a slight overlay of the main color.</p>
-                  <!--CODE-->
-                  <div class='color-img-overlay'>
-                    <div></div>
-                    <!--Necessary empty div for overlay-->
-                    <img src="img/smoke.jpg" />
-                  </div>
-                  <!--CODE-->
-                </div>
+            <div class="box-12 accordion">
+              <h3>Forms</h3>
+              <section class="well">
+                <form>
+                  <input type="text" />
+                  <input type="radio" />
+                  <input type="radio" />
+                  <input type="radio" />
+                  <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                  </select>
+                  <textarea></textarea>
+                </form>
+              </section>
+            </div>
 
-                <div class="box-12 box-tablet-6 box-desktop-4">
-                  <h5>Neat Overlay</h5>
-                  <p>Set height and "cover" for "neatness".</p>
-                  <!--CODE-->
-                  <div class='neat-img-overlay'>
-                    <div></div>
-                    <!--Necessary empty div for overlay-->
-                    <img src="img/smoke.jpg" />
-                  </div>
-                  <!--CODE-->
-                </div>
+            <div class="box-12 accordion">
+              <h3>Miscellanious</h3>
+              <section class="well">
+                <section class="well">Wells</section>
+              </section>
+            </div>
 
-
-              </div>
-            </section>
           </div>
 
-          <div class="box-12 accordion">
-            <h3>Image boxes</h3>
-            <section class="well">
-              <div class="row">
+          <div class="accordion-group">
 
-                <div class="box-12 box-tablet-6 box-desktop-4">
-                  <h5>Above and below</h5>
-                  <p>A title and an attribution.</p>
-                  <!--CODE-->
-                  <div class='image-attribution-box'>
-                    <h4>Optional Title</h4>
-                    <img src="img/smoke.jpg" />
-                    <h6>Optional Attribution or description goes here.</h6>
+            <div class="box-12 accordion">
+              <h3>Buttons</h3>
+              <section class="well">
+                <a href="#" class="default-button">Default</a>
+                <a href="#" class="primary-button">Primary</a>
+                <a href="#" class="secondary-button">Secondary</a>
+                <a href="#" class="cancel-button">Cancel</a>
+                <a href="#" class="confirm-button">Accept</a>
+              </section>
+            </div>
+
+            <div class="box-12 accordion">
+              <h3>Headers</h3>
+              <section class="well">
+                <h1>Top Header</h1>
+                <h2>Main Header</h2>
+                <h3>Section Header</h3>
+                <h4>Title</h4>
+                <h5>Significance</h5>
+                <h6>Notes</h6>
+                <p>Paragraph Tags</p>
+                <a href="#">Links</a>
+              </section>
+            </div>
+
+
+            <div class="box-12 accordion">
+              <h3>Images</h3>
+              <section class="well">
+                <p>Surrounded by .neat-img-overlay and with an empty div immediately prior to the image tag. </p>
+                <div class="row">
+                  <div class="box-12 box-tablet-6 box-desktop-4">
+                    <h5>Light Overlay</h5>
+                    <p>Adds a slight, transparent overlay.</p>
+                    <!--CODE-->
+                    <div class='light-img-overlay'>
+                      <div></div>
+                      <!--Necessary empty div for overlay-->
+                      <img src="img/smoke.jpg" />
+                    </div>
+                    <!--CODE-->
                   </div>
-                  <!--CODE-->
+
+
+                  <div class="box-12 box-tablet-6 box-desktop-4">
+                    <h5>Color Overlay</h5>
+                    <p>Adds a slight overlay of the main color.</p>
+                    <!--CODE-->
+                    <div class='color-img-overlay'>
+                      <div></div>
+                      <!--Necessary empty div for overlay-->
+                      <img src="img/smoke.jpg" />
+                    </div>
+                    <!--CODE-->
+                  </div>
+
+                  <div class="box-12 box-tablet-6 box-desktop-4">
+                    <h5>Neat Overlay</h5>
+                    <p>Set height and "cover" for "neatness".</p>
+                    <!--CODE-->
+                    <div class='neat-img-overlay'>
+                      <div></div>
+                      <!--Necessary empty div for overlay-->
+                      <img src="img/smoke.jpg" />
+                    </div>
+                    <!--CODE-->
+                  </div>
+
+
+                </div>
+              </section>
+            </div>
+
+            <div class="box-12 accordion">
+              <h3>Image boxes</h3>
+              <section class="well">
+                <div class="row">
+
+                  <div class="box-12 box-tablet-6 box-desktop-4">
+                    <h5>Above and below</h5>
+                    <p>A title and an attribution.</p>
+                    <!--CODE-->
+                    <div class='image-attribution-box'>
+                      <h4>Optional Title</h4>
+                      <img src="img/smoke.jpg" />
+                      <h6>Optional Attribution or description goes here.</h6>
+                    </div>
+                    <!--CODE-->
+                  </div>
+
+                  <div class="box-12 box-tablet-6 box-desktop-4">
+                    <h5>Just a Title</h5>
+                    <p>A quick description</p>
+                    <!--CODE-->
+                    <div class='light-image-attribution-box'>
+                      <h4>Optional Title</h4>
+                      <img src="img/smoke.jpg" />
+                    </div>
+                    <!--CODE-->
+                  </div>
+
+                  <div class="box-12 box-tablet-6 box-desktop-4">
+                    <h5>Main Color</h5>
+                    <p>A highlight or primary image.</p>
+                    <!--CODE-->
+                    <div class='main-image-attribution-box'>
+                      <img src="img/smoke.jpg" />
+                      <h6>Optional Attribution or description goes here.</h6>
+                    </div>
+                    <!--CODE-->
+                  </div>
+
                 </div>
 
-                <div class="box-12 box-tablet-6 box-desktop-4">
-                  <h5>Just a Title</h5>
-                  <p>A quick description</p>
-                  <!--CODE-->
-                  <div class='light-image-attribution-box'>
-                    <h4>Optional Title</h4>
-                    <img src="img/smoke.jpg" />
-                  </div>
-                  <!--CODE-->
-                </div>
+              </section>
+            </div>
 
-                <div class="box-12 box-tablet-6 box-desktop-4">
-                  <h5>Main Color</h5>
-                  <p>A highlight or primary image.</p>
-                  <!--CODE-->
-                  <div class='main-image-attribution-box'>
-                    <img src="img/smoke.jpg" />
-                    <h6>Optional Attribution or description goes here.</h6>
-                  </div>
-                  <!--CODE-->
-                </div>
+            <div class="box-12 accordion">
+              <h3>Forms</h3>
+              <section class="well">
+                <form>
+                  <input type="text" />
+                  <input type="radio" />
+                  <input type="radio" />
+                  <input type="radio" />
+                  <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                  </select>
+                  <textarea></textarea>
+                </form>
+              </section>
+            </div>
 
-              </div>
+            <div class="box-12 accordion">
+              <h3>Miscellanious</h3>
+              <section class="well">
+                <section class="well">Wells</section>
+              </section>
+            </div>
 
-            </section>
           </div>
+          
 
-          <div class="box-12 accordion">
-            <h3>Forms</h3>
-            <section class="well">
-              <form>  
-                <input type="text" />
-                <input type="radio" />
-                <input type="radio" />
-                <input type="radio" />
-                <select><option>1</option><option>2</option><option>3</option></select>
-                <textarea></textarea>
-              </form>
-            </section>
-          </div>
-
-          <div class="box-12 accordion">
-            <h3>Miscellanious</h3>
-            <section class="well">
-              <section class="well">Wells</section>
-            </section>
-          </div>
-
-          <!-- 
-      <div class="box-12">
-          <h3>Misc.</h3>
-          <section class="well">
-            <section class="well">Wells</section>
-          </section>
-        </div> -->
         </div>
       </div>
     </div>
@@ -418,15 +571,15 @@
             <h3>Menu Bar</h3>
             <p>3 Different Styles of Menu Bars- Dark, Transparent, and Colorful</p>
           </div>
-          
+
           <div class="box-6">
             <h3>Call to Action</h3>
-            <p>3 Different Layouts- Completely Centered, Lower Left, and Middle Right</p>          
+            <p>3 Different Layouts- Completely Centered, Lower Left, and Middle Right</p>
           </div>
-          
+
           <div class="box-6">
             <h3>Page Sections</h3>
-            <p>Triple Column Intro, Contact, Portfolios, Quotes, And More</p>          
+            <p>Triple Column Intro, Contact, Portfolios, Quotes, And More</p>
           </div>
 
           <div class="box-6">
@@ -446,17 +599,17 @@
               Name: <input type="text" name="name">
 
               Email: <input type="text" name="email">
-              
+
               Reason for Contact: <select name="reason">
                 <option>Freelance Design</option>
                 <option>Freelance Design</option>
                 <option>Freelance Design</option>
               </select>
-              
+
               Message: <textarea name="message"></textarea>
-              
+
               <input type="submit" class="primary-button">
-            
+
             </form>
           </div>
 
@@ -498,14 +651,14 @@
 
   <div id="footer" class="page-section footer">
     <div class="container">
-    <h3>Splat <span class="fas fa-tint"></span></h3>
-    <hr  />
-    <h6>This page was made by this template.</h6>
-    <ul>
-      <li>My Portfolio</li>
-      <li>My Github</li>
-      <li>My Email</li>
-    </ul>
+      <h3>Splat <span class="fas fa-tint"></span></h3>
+      <hr />
+      <h6>This page was made by this template.</h6>
+      <ul>
+        <li>My Portfolio</li>
+        <li>My Github</li>
+        <li>My Email</li>
+      </ul>
     </div>
   </div>
 

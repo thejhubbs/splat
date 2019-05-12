@@ -1,17 +1,23 @@
-function initiateAccordions(){
-    hideAll();    
+class Accordion {
+    constructor(element) {
+        this.accordionGroup = $(element);
+        this.accordions = this.accordionGroup.contents('.accordion');
+        this.accordionSections = this.accordionGroup.find('section');
 
-    $('.accordion').click((e) => {
-        hideAll('slide');    
-        $(e.target).parent().contents('section').slideToggle();
+        this.accordions.click((e) => {
+            this.accordionSections.slideUp();        
+            $(e.target).parent().contents('section').slideToggle();
+        });
+    }
 
-    });
+    
+
 }
 
-function hideAll(type){
-    if(type == 'slide') {
-        $('.accordion section').slideUp();   
-    }else {
-        $('.accordion section').hide();
-    }
+function initiateAccordions(){
+    //Eventually allow for preshow option
+    $('.accordion section').slideUp();    
+
+    Array.from($('.accordion-group')).forEach((item) => { new Accordion(item) });
+
 }
