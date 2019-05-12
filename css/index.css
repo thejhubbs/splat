@@ -674,6 +674,9 @@ Responsive boxes & rows
 .main-screen.main-screen-layout-2 h5 {
   margin-top: 10px;
 }
+.main-screen.main-screen-layout-3 h6 {
+  font-size: 2em;
+}
 .title-hr {
   width: 60%;
   margin: 36px auto;
@@ -834,6 +837,10 @@ Collapseable for mobile.
     background-color: rgba(235, 235, 240, 0.95);
     text-shadow: -1px -1px 0 #645cb3, 1px -1px 0 #645cb3, -1px 1px 0 #645cb3, 1px 1px 0 #1d1c27;
   }
+}
+#top-nav.top-nav-colorful {
+  background-image: linear-gradient(#9690cb, #564ea7, #645cb3, #756dbb);
+  border-color: #3d2584;
 }
 .form-colors {
   background-color: transparent;
