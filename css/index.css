@@ -1281,6 +1281,13 @@ a.confirm-button:hover {
   color: #326e5a;
   background: none;
 }
+.accordion .fas {
+  border: 2px solid #645cb3;
+  font-size: 20px;
+  border-radius: 25px;
+  width: 26px;
+  height: 26px;
+}
 /* ========================================= 
 SPECIFIC OBJECTS
 ===========================================*/

@@ -23,6 +23,8 @@ class AccordionTab {
         this.heading = this.accordion.contents('h3');
         this.section = this.accordion.children('section');
         this.showing = this.accordion.data('show');
+        this.icon = this.accordion.find('.fas');
+        console.log(this.icon)
 
         if (!this.showing) { this.section.hide(); }
         this.print();
@@ -36,8 +38,16 @@ class AccordionTab {
     }
 
     print() {
-        if(this.showing == true) { this.section.slideDown(); }
-        else { this.section.slideUp(); }
+        if(this.showing == true) { 
+            this.section.slideDown(); 
+            this.icon.removeClass('fa-angle-up');
+            this.icon.addClass('fa-angle-down');
+        }
+        else { 
+            this.section.slideUp(); 
+            this.icon.removeClass('fa-angle-down');
+            this.icon.addClass('fa-angle-up');
+        }
     }
 
     toggleHide() {
