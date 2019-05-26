@@ -3,25 +3,25 @@
 @import "./../Colors/colors.less";
 
 //Make your choice!
-@import "./buttons/button-solid.less";
-@import "./buttons/button-border.less";
+//@import "./buttons/button-solid.less";
+//@import "./buttons/button-border.less";
 @import "./buttons/button-underline.less";
 
 
 input[type=submit].default-button, button.default-button, a.default-button {
-    .button-solid(@default-button-text-color, @default-button-bg-color);
+    .button-underline(@default-button-text-color, @default-button-bg-color);
 }
-input[type=submit].primary-button, button.primary-button a.primary-button {
-    .button-solid(@primary-button-text-color, @primary-button-bg-color);
+input[type=submit].primary-button, button.primary-button, a.primary-button {
+    .button-underline(@primary-button-text-color, @primary-button-bg-color);
 }
-input[type=submit].secondary-button, button.secondary-button a.secondary-button {
-    .button-solid(@secondary-button-text-color, @secondary-button-bg-color);
+input[type=submit].secondary-button, button.secondary-button, a.secondary-button {
+    .button-underline(@secondary-button-text-color, @secondary-button-bg-color);
 }
-input[type=submit].cancel-button, button.cancel-button a.cancel-button {
-        .button-solid(@cancel-button-text-color, @cancel-button-bg-color);
+input[type=submit].cancel-button, button.cancel-button, a.cancel-button {
+    .button-underline(@cancel-button-text-color, @cancel-button-bg-color);
 }
-input[type=submit].confirm-button, button.confirm-button a.confirm-button {
-        .button-solid(@confirm-button-text-color, @confirm-button-bg-color);
+input[type=submit].confirm-button, button.confirm-button, a.confirm-button {
+    .button-underline(@confirm-button-text-color, @confirm-button-bg-color);
 }
 
 
