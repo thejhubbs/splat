@@ -1,0 +1,160 @@
+
+/* themed-divider css if you choose to use it */
+.themed-divider {
+  height: 8px;
+  background-color: @light-color;
+  border-top: 8px solid @highlight-color;
+  border-bottom: 8px solid @secondary-color;
+  box-sizing: content-box;
+}
+
+/* These are coded as variants, not separate css. No matter which one is chosen, you will need all "tall-menu" css. The extra css (if one of the second two is chosen) will follow. this means you'll need .tall-menu and possibly a second class on the div. */
+.tall-menu {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.tall-menu-item {
+  background-image: url("http://staging.nycelite.com/wp-content/themes/nycelite/images/default-program.jpg");
+  width: 200px;
+  height: 400px;
+ }
+
+/* Set the background images here, from left to right. */
+
+.tall-menu-item:nth-child(1) {
+  background-image: url("http://staging.nycelite.com/wp-content/themes/nycelite/images/default-program.jpg");
+}
+
+.tall-menu-item:nth-child(2) {
+  background-image: url("http://staging.nycelite.com/wp-content/themes/nycelite/images/default-program.jpg");
+}
+
+.tall-menu-item:nth-child(3) {
+  background-image: url("http://staging.nycelite.com/wp-content/themes/nycelite/images/default-program.jpg");
+}
+
+.tall-menu-item:nth-child(4) {
+  background-image: url("http://staging.nycelite.com/wp-content/themes/nycelite/images/default-program.jpg");
+}
+
+.tall-menu-item h2 {
+  text-align: center;
+  color: @light-color;
+  font-size: 38px;
+}
+
+.tall-menu-item h3 {
+  background-color: @highlight-color;
+  margin: 0;
+  padding: 20px;
+  color: @light-color;
+  text-align: center;
+  font-size: 26px;
+}
+.tall-menu-item p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: @light-color;
+}
+.tall-menu-item:nth-child(even) h3 {
+  background-color: @main-color;
+}
+
+.tall-menu-item:nth-child(even) a {
+  background-color: @transparent-main-color;
+}
+
+.tall-menu-item span.fas {
+  color: @light-color;
+  font-size: 48px;
+  padding: 10px;
+  display: block;
+  text-align: center;
+}
+
+.tall-menu-item a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: @transparent-main-color;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.tall-menu-item:hover a {
+  background-color: @highlight-color;
+}
+
+.tall-menu-item:hover span {
+  color: @secondary-color;
+
+  text-shadow: 2px 2px 4px @light-color, -2px 2px 4px @light-color, -2px -2px 4px @light-color,
+    2px -2px 4px @light-color;
+}
+
+.tall-menu-item:hover h3 {
+  text-decoration: underline;
+  text-decoration-color: @secondary-color;
+}
+
+.tall-menu-item:nth-child(even):hover a {
+  background-color: @main-color;
+}
+
+/*EXTRA CSS IF SECOND ONE IS CHOSEN*/
+
+.solo-color .tall-menu-item a {
+  border: 8px solid @highlight-color;
+}
+.solo-color.tall-menu .tall-menu-item:nth-child(even) a {
+  border: 8px solid @highlight-color;
+}
+
+.solo-color .tall-menu-item:nth-child(even) h3 {
+  background-color: @highlight-color;
+}
+
+.solo-color .tall-menu-item:nth-child(even) a {
+  border: 2px solid @highlight-color;
+  background-color: @transparent-main-color;
+}
+
+.solo-color .tall-menu-item:nth-child(even):hover a {
+  background-color: @highlight-color;
+}
+
+.solo-color .tall-menu-item span {
+  margin: 35px;
+  font-size: 64px;
+}
+
+/*EXTRA CSS IF THIRD ONE IS CHOSEN*/
+
+.spread-menu .tall-menu-item a {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+
+@fadeout: 10%;
+@fadein: 10%;
+.spread-menu .tall-menu-item h3 {
+  width: 100%;
+  background-color:fadeOut(@highlight-color, @fadeout);
+}
+.spread-menu .tall-menu-item:nth-child(even)  h3 {
+  background-color:fadeOut(@main-color, @fadeout);
+}
+
+.spread-menu .tall-menu-item:hover a {
+  background-color: fadeIn(@highlight-color, @fadein);
+}
+.spread-menu .tall-menu-item:nth-child(even):hover a {
+  background-color: fadeIn(@main-color, @fadein);
+}

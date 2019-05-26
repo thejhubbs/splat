@@ -78,7 +78,24 @@
 }
 
 
-.footer {		
+
+.page-section {
+	background-color:@light-color;
+
+	&:nth-child(odd) {
+		background-color:@light-grey-color;
+	}
+
+	&:first-child {
+		background-color:@main-color;
+	}
+	&:last-child {
+		background-color:@light-main-color;	
+	}
+}
+
+.page-section.footer {		
+	background-color:@dark-main-color;
 	h3 {
 		font-family: @unique-text-font;
 		color: @nav-title-color;

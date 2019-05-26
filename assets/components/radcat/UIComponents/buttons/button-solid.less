@@ -1,0 +1,49 @@
+//***************************
+//      BUTTONS
+//*************************** 
+.button-solid(@color, @background) {
+    display: inline-block;
+    text-decoration: none;
+	width: 100%;
+	margin: 10px 0;
+	@media @desktop {
+		width: auto; 
+		margin: 5px;
+	}
+	padding: 12px 25px;
+    border-radius: @default-border-radius;
+    
+    border: 4px solid @background;
+    color: @color;
+    background-color: @background;
+    
+    &:hover {
+        border: 4px outset @background;
+        color: @background;
+        background: none;
+        
+    }
+
+}
+
+//Double declarations for specificity on anchor tag.
+a.default-button-solid-button {
+	.button-solid(@default-button-text-color, @default-button-bg-color);
+}
+
+a.primary-button-solid-button  {
+    .button-solid(@primary-button-text-color, @primary-button-bg-color);
+}
+
+a.secondary-button-solid-button  {
+    .button-solid(@secondary-button-text-color, @secondary-button-bg-color);
+}
+
+a.cancel-button-solid-button  {
+    .button-solid(@cancel-button-text-color, @cancel-button-bg-color);
+}
+
+a.confirm-button-solid-button  {
+    .button-solid(@confirm-button-text-color, @confirm-button-bg-color);
+}
+

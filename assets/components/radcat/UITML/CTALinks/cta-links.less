@@ -1,0 +1,325 @@
+.example {height:400px;}
+
+.simple-trio {
+    text-align: center;
+    padding: 0px 25px;
+    background-image: linear-gradient(white, #efefef, #ddd);
+    z-index: 2;
+    border-top: 4px solid @highlight-color;
+    border-bottom: 2px solid @highlight-color;
+  }
+  
+  /*The container of all 3 sections*/
+  .simple-trio > div {
+    display: flex;
+  }
+  
+  .simple-trio a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /*Individual section itself*/
+  .simple-trio > div > div {
+    width: 33%;
+    margin-bottom: 5px;
+  }
+  .simple-trio > div > div:first-child {
+    border-right: 1px solid #ccc;
+  }
+  .simple-trio > div > div:last-child {
+    border-left: 1px solid #ccc;
+  }
+  .simple-trio > div > div:hover {
+    background-image: linear-gradient(#ddd, #ccc, #ddd);
+    cursor: pointer;
+    margin-bottom: 0px;
+  }
+  .simple-trio > div > div:hover span {
+    color: @secondary-color;
+    background-color: #ddd;
+    border: 2px outset @highlight-color;
+  }
+  
+  .simple-trio > div > div:hover p {
+    color: black;
+    font-weight: bold;
+  }
+  .simple-trio > div > div:hover h3 {
+    color: @highlight-color;
+    font-weight: 900;
+  }
+  
+  .simple-trio span {
+    color: white;
+    background-color: @highlight-color;
+    border-radius: 100%;
+    padding: 6px;
+    position: absolute;
+    font-size: 22px;
+    height:26px;
+    width:26px;
+    margin-top:-28px;
+    margin-left:-18px;
+    border: 2px solid transparent;
+    box-sizing:content-box;
+  }
+  .simple-trio h3 {
+    color: @highlight-color;
+    padding-top: 24px;
+    margin-top: 0;
+  }
+  .simple-trio p {
+    color: @grey-color;
+    font-style: italic;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .simple-trio {
+      padding: 0;
+    }
+    .simple-trio > div {
+      flex-wrap: wrap;
+    }
+    .simple-trio > div > div {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .simple-trio > div > div:hover {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+  
+  /* 
+  
+  BOX TRIO
+  
+  */
+  
+  .box-trio {
+    width: 100%;
+    background: @light-color;
+    height: 8px;
+    border-top:8px solid @highlight-color;
+    border-bottom:8px solid @secondary-color;
+    box-sizing:content-box;
+    }
+  .box-trio a {
+    text-decoration: none;
+    color: @dark-color;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+  .box-trio > div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    left: 0;
+  }
+  .box-trio > div > div {
+    text-align: Center;
+    width: 250px;
+    height: 130px;
+    background-color: @highlight-color;
+    margin: -62px 10px 0;
+    border-radius: 4px;
+    border:2px solid transparent;
+  }
+  
+  .box-trio span {
+    color: @light-main-color;
+    text-shadow:2px 2px 2px @main-color;
+    background-color:@secondary-color;
+    width:40px;
+    height:40px;
+    padding:8px;
+    border-radius:100%;
+    border:8px solid @highlight-color;
+    font-size: 40px;
+    margin-top:-40px;
+    box-sizing:content-box;
+  }
+  .box-trio h3 {
+    color: @light-color;
+    margin: 0;
+    font-size:26px;
+  }
+  .box-trio p {
+    color: @main-color;
+  }
+  
+  .box-trio > div > div:hover span {
+      text-shadow:2px 2px 2px @main-color;
+      color: @light-color;
+      box-shadow: 0px -2px @secondary-color, -1px -2px @secondary-color, 1px -2px @secondary-color;
+  }
+  .box-trio > div > div:hover p {
+      color:@light-color;
+  }
+  .box-trio > div > div:hover h3 {
+    text-decoration:underline;
+    text-decoration-color:@secondary-color;
+  }
+  .box-trio > div > div:hover {
+    border:2px solid @secondary-color;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .box-trio {
+      padding: 0;
+      height:220px;
+    }
+    .box-trio > div {
+      flex-wrap: wrap;
+      position:relative;
+    }
+    .box-trio > div > div {
+      width: 100%;
+      height:80px;
+      margin-top:-10px;
+      margin-bottom: 20px;
+    }
+    .box-trio > div > div:hover {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    .box-trio span {
+      display:none;
+    }
+    .box-trio p {
+      color: @dark-light-color;
+    }
+    .box-trio > div > div:first-child  span {
+      display:inline-block;
+    }
+    .box-trio > div > div:first-child {
+      margin-top:-50px;
+      height:120px;
+    }
+  }
+  
+  
+  /*
+  
+  IMAGE TRIO- Three Colors
+  
+  */
+  .image-trio {
+    width: 100%;
+  }
+
+  @first-amt: 20%;
+  @second-amt: 5%;
+  @color-two: @main-color;
+  @color-three: @secondary-color;
+
+  .image-trio a {
+    text-decoration: none;
+    color: @dark-color;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: fadeOut(@highlight-color, @first-amt);
+    border-radius: 4px;
+  }
+  .image-trio > div > div:first-child a {
+    background-color: fadeOut(@color-two, @first-amt);
+  }
+  .image-trio > div > div:last-child a { 
+    background-color: fadeOut(@color-three, @first-amt);
+  }
+  
+  .image-trio > div > div:hover a {
+    background-color: fadeOut(@highlight-color, @second-amt);
+  }
+  .image-trio > div > div:hover:first-child a {
+    background-color: fadeOut(@color-two, @second-amt);
+  }
+  .image-trio > div > div:hover:last-child a {
+    background-color: fadeOut(@color-three, @second-amt);
+  }
+
+
+  .image-trio > div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    left: 0;
+  }
+  .image-trio > div > div {
+    text-align: Center;
+    width: 250px;
+    height: 150px;
+    background-color: @highlight-color;
+    background-image: url("https://images.pexels.com/photos/990824/pexels-photo-990824.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    margin: -75px 10px 0;
+    border-radius: 4px;
+  }
+  
+  .image-trio span {
+    color: rgb(135, 165, 245);
+    font-size: 40px;
+  }
+  .image-trio h3 {
+    color: @light-color;
+    margin-bottom: 0;
+    font-size:24px;
+  }
+  .image-trio p {
+    margin-top:4px;
+    color: rgb(115, 145, 245);
+  }
+  
+  .image-trio > div > div:hover span {
+    color: @light-color;
+  }
+  .image-trio > div > div:hover p {
+    color: @light-color;
+  }
+  .image-trio > div > div:hover h3 {
+    text-shadow: 2px 2px 2px rgb(115, 145, 245);
+  }
+  
+  
+  
+  @media screen and (max-width: 700px) {
+    .image-trio {
+      padding: 0;
+      height:400px;
+    }
+    .image-trio > div {
+      flex-wrap: wrap;
+      position:relative;
+    }
+    .image-trio > div > div {
+      width: 100%;
+      height:150px;
+      margin-top:-10px;
+      margin-bottom: 20px;
+    }
+    .image-trio > div > div:hover {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    .image-trio p {
+      color: #aaa;
+    }
+    .image-trio > div > div:first-child  span {
+      display:inline-block;
+    }
+    .image-trio > div > div:first-child {
+      margin-top:-50px;
+    }
+  }
+  

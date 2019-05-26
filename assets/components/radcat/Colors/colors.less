@@ -1,0 +1,102 @@
+//MAIN COLOR SCHEME
+//Splat provides a growing list of tested colors to try.
+//NOTE: secondary and highlight colors are automatically generated.
+//It would not be reccommended to simply override the default values unless you have the design/color eye. 
+@dark-lavender:  rgb(100, 92, 179); //splat default color
+@coffeehouse: rgb(179, 92, 100);
+@landscape: rgb(92, 179, 100);
+@desert: rgb(179, 179, 100);
+@sky: rgb(100, 179, 179);
+
+@candy: rgb(179, 92, 179);
+@halloween: rgb(179, 100, 57); 
+@modern: rgb(179, 179, 179);
+@aqua: rgb(70, 70, 194);
+@autumn: rgb(202, 105, 40);
+
+
+//=====THEME SETTINGS
+@modern-purple: @dark-lavender, 3, 6, 4, 7, 1, 1;
+@toy-blue: @sky, 10, 6, 10, 10, 1.5, 1;
+@cotton-candy: @candy, 10, 5, 8, 7, 1.5, 1;
+@new-york: @aqua, 10, 9, 8, 8, .8, -.25;
+
+@themes: @modern-purple, @toy-blue, @cotton-candy, @new-york;
+
+//================
+//----Set Settings---
+//
+@settings: extract(@themes, 1);
+//
+@set-main-color: extract(@settings, 1);
+//
+//<5 only 1 color, 1 shade //5 is 1 color & 2 shades //>5 is 2 colors & 1 shade
+//10 is 3 colors (closer to main) //15  is 3 colors (closer to secondary)
+@color-contrast: extract(@settings, 2);
+//Apparent on 1-10 (0-11)
+@color-saturation: extract(@settings, 3);
+@lightness: extract(@settings, 4);
+@lightness-contrast: extract(@settings, 5);
+//
+//Fine tune the hue, negative to reverse the hue direction
+@secondary-direction: extract(@settings, 6);
+@highlight-direction: extract(@settings, 7);
+//================
+//You CAN override if below if you wish, not particularly recommended. Override still affected by lightness and saturation settings.
+@set-secondary-color: spin(@set-main-color, (@secondary-direction * 18 * @color-contrast));
+//Override Here
+@set-highlight-color: spin(@set-main-color, (@highlight-direction * 3 * @color-contrast));
+//Override Here
+//================
+
+
+@main-color: saturate( shade(@set-main-color, -3*(@lightness - 5)) , 3*(@color-saturation - 5));
+@secondary-color: saturate( shade(@set-secondary-color, -3*(@lightness - 7)), 3*(@color-saturation - 5));
+@highlight-color: saturate( shade(@set-highlight-color, -5*(@lightness - 10)) , 5 * @color-saturation);
+
+//@dark-color, @light-color, and @grey-color are 
+//automatically seeded from the main color 
+//(desaturated & lightened/darkened)
+@dark-color: saturate( lighten(@main-color, 8 * (@lightness - @lightness-contrast - 5)), 3*(@color-saturation - 5));
+@light-color: saturate( lighten(@main-color, 8 * (@lightness + @lightness-contrast - 5)), 3*(@color-saturation - 5));
+@grey-color:   desaturate( lighten(@main-color, @lightness - 5) , 6*(@color-saturation - 1)) ;
+
+//Cancel & confirm colors with mixed with red & green
+@cancel-color: mix(red, @main-color);
+@confirm-color: mix(green, @main-color);
+
+body {background:@light-color;}
+
+
+/* ========================================= 
+COMPLETE COLORS SET
+===========================================*/
+//Full Colors SET HERE 
+
+@opacity: 30%;
+@transparent-main-color: fadeout(@main-color, @opacity);
+@transparent-secondary-color: fadeout(@secondary-color, @opacity);
+@transparent-highlight-color: fadeout(@highlight-color, @opacity);
+@transparent-dark-color: fadeout(@dark-color, @opacity);
+@transparent-light-color: fadeout(@light-color, @opacity);
+@transparent-grey-color: fadeout(@grey-color, @opacity);
+//
+@amount: 3 * (@lightness + @lightness-contrast - 5);
+
+@dark-main-color: darken(@main-color, @amount);
+@dark-secondary-color: darken(@secondary-color, @amount);
+@dark-highlight-color: darken(@highlight-color, @amount);
+@dark-dark-color: darken(@dark-color, @amount);
+@dark-light-color: darken(@light-color, @amount);
+@dark-grey-color: darken(@grey-color, @amount);
+//
+@light-main-color: lighten(@main-color, @amount);
+@light-secondary-color: lighten(@secondary-color, @amount);
+@light-highlight-color: lighten(@highlight-color, @amount);
+@light-dark-color: lighten(@dark-color, @amount);
+@light-light-color: lighten(@light-color, @amount);
+@light-grey-color: lighten(@grey-color, @amount);
+
+//Remove in production
+//@import "./example.less";
+@import "./styles.less";
