@@ -24,8 +24,6 @@ class AccordionTab {
         this.section = this.accordion.children('section');
         this.showing = this.accordion.data('show');
         this.icon = this.accordion.find('.fas');
-        console.log(this.icon)
-
         if (!this.showing) { this.section.hide(); }
         this.print();
 
@@ -58,7 +56,6 @@ class AccordionTab {
 
 function initiateAccordions(){
      
-
     Array.from($('.accordion-group')).forEach((item) => { new Accordion(item) });
 
 }

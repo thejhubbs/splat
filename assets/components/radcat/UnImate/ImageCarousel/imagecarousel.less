@@ -1,0 +1,34 @@
+.carousel {
+    @media @mobile {height:200px;}
+    @media @tablet {height:300px;}
+    @media @desktop {height:400px;}
+    
+    .slide {
+        height:100%;
+        width:100%;
+        overflow:hidden;
+
+        &>section {
+        }
+    }
+
+    .arrow(){
+        position:absolute;
+        display:inline-block;
+        
+    }
+    .previous-arrow {
+        .arrow();
+        left:0;
+    }
+    .next-arrow {
+        .arrow();
+        right:0;
+    }
+
+    img {
+        min-width:100%;
+        min-height:100%;
+    }
+
+}

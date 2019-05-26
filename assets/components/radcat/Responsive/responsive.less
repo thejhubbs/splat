@@ -1,0 +1,182 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+
+@smallest-size: 500px;
+@mobile-size: 700px;
+@desktop-size: 1000px;
+@biggest-size: 1600px;
+
+@smallest: ~"screen and (max-width: @{smallest-size})"; 
+@mobile: ~"screen and (max-width: @{mobile-size})";
+@tablet: ~"screen and (min-width: @{mobile-size})";
+@hard-tablet: ~"screen and (min-width: @{mobile-size}) and (max-width: @{desktop-size})";
+@desktop: ~"screen and (min-width: @{desktop-size})";
+@biggest: ~"screen and (min-width: @{biggest-size})";
+
+/* ========================================= 
+CSS Functions for ease of writing
+===========================================*/
+.inline-flex {
+	//For displaying all children on the same line and aligning vertically
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.wrap-flex {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	align-content: space-around;
+	flex-wrap: wrap;
+}
+.abs-center-flex{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.center-text {
+	text-align: center;
+}
+
+/* ========================================= 
+Responsive boxes & rows
+===========================================*/
+.page-wrapper {
+	.container;
+	margin: 0 auto;
+	padding: 0;
+	height: auto;
+	
+}
+
+//Draws a border and adds some margin/padding, to create essential
+//page divisions for a single page site.
+.page-section {
+	> .container {@media @desktop { width: 876px; }}
+	.abs-center-flex;	
+	padding: 40px 40px;
+	
+}
+.page-section.whole-page {
+	min-height:100vh;
+}
+
+//Default container and row.
+.container {padding: 10px; width: 100%; height: 100%;}
+//Row allows you to place "boxes" that wrap around.
+//12 columns to a row.
+.row { .wrap-flex; }
+
+//DEFAULT BOXES
+// Defines .box-1, .box-2, ... .box-12
+// As well as .box-mobile-x, .box-tablet-x, and .box-desktop-x.
+//Multiple loops necessary for cascading rules
+each(range(12), {
+	@num: 13-@index;
+    @percent: floor(@num/12*100);
+    .box-@{num} { width: ~"@{percent}%"; }
+});
+each(range(12), {
+	@num: 13-@index;
+    @percent: floor(@num/12*100);
+	.box-smallest-@{num} { @media @smallest { width: ~"@{percent}%"; } }    
+});
+each(range(12), {
+	@num: 13-@index;
+    @percent: floor(@num/12*100);
+	.box-mobile-@{num} { @media @mobile { width: ~"@{percent}%"; } }    
+});
+each(range(12), {
+	@num: 13-@index;
+    @percent: floor(@num/12*100);
+	 .box-tablet-@{num} { @media @tablet { width: ~"@{percent}%"; } }    
+});
+each(range(12), {
+	@num: 13-@index;
+    @percent: floor(@num/12*100);
+	.box-desktop-@{num} { @media @desktop { width: ~"@{percent}%"; } }
+});
+each(range(12), {
+	@num: 13-@index;
+    @percent: floor(@num/12*100);
+	.box-biggest-@{num} { @media @biggest { width: ~"@{percent}%"; } }    
+});
+
+//TARGET HIDDEN- important used because these clases should -always- override others
+.smallest-hidden {@media @smallest {display:none !important;} }
+.mobile-hidden {@media @mobile {display:none !important;} }
+.tablet-hidden {@media @hard-tablet {display:none !important;} }
+.desktop-hidden {@media @desktop {display:none !important;} }
+.biggest-hidden {@media @biggest {display:none !important;} }
+
+//TARGET ONLY
+.mobile-only {
+    .tablet-hidden();
+    .desktop-hidden();
+}
+.tablet-only {
+    .mobile-hidden();
+    .desktop-hidden();
+}
+.desktop-only {
+    .mobile-hidden();
+    .tablet-hidden();
+}

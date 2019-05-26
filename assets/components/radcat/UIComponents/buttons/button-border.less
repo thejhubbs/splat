@@ -1,0 +1,45 @@
+//***************************
+//      BUTTONS
+//*************************** 
+.button-border(@color, @background) {
+    display: inline-block;
+    text-decoration: none;
+	width: 100%;
+	margin: 10px 0;
+	@media @desktop {
+		width: auto; 
+		margin: 5px;
+	}
+	padding: 12px 25px;
+    border-radius: @default-border-radius;
+    
+    border: 4px solid @background;
+    color: @background;
+    background-color: transparent;
+    
+    &:hover {
+        border: 4px outset @background;
+        color: @color;
+        background-color:fadeOut(@background,50%);
+        
+    }
+
+}
+
+//Double declarations for specificity on anchor tag.
+a.default-button-border-button {
+	.button-border(@default-button-text-color, @default-button-bg-color);
+}
+a.primary-button-border-button {
+    .button-border(@primary-button-text-color, @primary-button-bg-color);
+}
+a.secondary-button-border-button {
+    .button-border(@secondary-button-text-color, @secondary-button-bg-color);
+}
+a.cancel-button-border-button {
+    .button-border(@cancel-button-text-color, @cancel-button-bg-color);
+}
+a.confirm-button-border-button {
+    .button-border(@confirm-button-text-color, @confirm-button-bg-color);
+}
+
