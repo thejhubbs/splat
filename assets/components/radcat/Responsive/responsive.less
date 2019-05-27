@@ -58,17 +58,28 @@ html, body {
 }
 
 
-@smallest-size: 500px;
-@mobile-size: 700px;
-@desktop-size: 1000px;
-@biggest-size: 1600px;
+//Reset breakpoints
+@smallest-size: 500px; //less than
+@mobile-size: 700px; //less than
+@desktop-size: 1000px; //more than
+@biggest-size: 1600px; //more than
 
+//Only applies to the smallest views, under 500px
 @smallest: ~"screen and (max-width: @{smallest-size})"; 
+//Mobile applies to itself and smaller 
 @mobile: ~"screen and (max-width: @{mobile-size})";
+//These classes all apply to themselves and larger.
 @tablet: ~"screen and (min-width: @{mobile-size})";
-@hard-tablet: ~"screen and (min-width: @{mobile-size}) and (max-width: @{desktop-size})";
 @desktop: ~"screen and (min-width: @{desktop-size})";
 @biggest: ~"screen and (min-width: @{biggest-size})";
+
+//"HARD" targets- ONLY that view, none larger/smaller
+//Not including smallest
+@hard-mobile: ~"screen and (min-width: @{smallest-size}) and (max-width: @{mobile-size})";
+//Not including >= desktop
+@hard-tablet: ~"screen and (min-width: @{mobile-size}) and (max-width: @{desktop-size})";
+//Not including biggest
+@hard-desktop: ~"screen and (min-width: @{desktop-size}) and (max-width: @{biggest-size})";
 
 /* ========================================= 
 CSS Functions for ease of writing
@@ -107,8 +118,6 @@ Responsive boxes & rows
 	
 }
 
-//Draws a border and adds some margin/padding, to create essential
-//page divisions for a single page site.
 .page-section {
 	> .container {@media @desktop { width: 876px; }}
 	.abs-center-flex;	
@@ -129,6 +138,7 @@ Responsive boxes & rows
 // Defines .box-1, .box-2, ... .box-12
 // As well as .box-mobile-x, .box-tablet-x, and .box-desktop-x.
 //Multiple loops necessary for cascading rules
+
 each(range(12), {
 	@num: 13-@index;
     @percent: floor(@num/12*100);

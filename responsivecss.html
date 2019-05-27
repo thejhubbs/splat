@@ -1,0 +1,224 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Responsive.CSS</title>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="./assets/css/assets/less/index.css">
+  
+  <!--Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Armata|Luckiest+Guy|Oswald|Righteous|Ubuntu"
+      rel="stylesheet">
+  <!--FontAwesome Icons-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!--jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+  <script src="assets/components/images/images.js"></script>
+  <script src="assets/components/radcat/UnImate/SimpleAccordion/accordions.js"></script>
+  <script src="assets/js/splat.js"></script>
+
+  <script src="assets/components/radcat/UnImate/TopMenu/menus.js"></script>
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <nav id="top-nav" class='top-nav'>
+    <div class="logo-and-name">
+      <h2><span id="menu-button" class="fas fa-code"></span></h2>
+      <h3><span class="fas fa-code"></span> Responsive</h3>
+    </div>
+
+    <ul class="tablet-hidden desktop-hidden" id="menu-list">
+      <li><a class="scroll" href="#top">Top</a></li>
+      <li><a class="scroll" href="#intro">Overview</a></li>
+      <li><a class="scroll" href="#download">Download</a></li>
+    </ul>
+
+    <ul class="mobile-hidden">
+      <li><a class="scroll" href="#top">Top</a></li>
+      <li><a class="scroll" href="#intro">Overview</a></li>
+      <li><a class="scroll" href="#download">Download</a></li>
+    </ul>
+
+
+  </nav>
+
+  <header id="top" class="main-screen">
+    <div class="image-text-overlay-center container">
+      <div>
+
+        <hr class="title-hr" />
+        <h1>Responsive.CSS</h1>
+        <h6>v0.9</h6>
+        <hr class="title-hr" />
+
+        <h4>A simple collection of responsive css classes & resets</h4>
+        <h5>Designed & Developed by Jordan Hubbard</h5>
+
+
+
+        <a href="#" class="default-button">Overview</a><br />
+        <a href="#" class="primary-button">Download</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <section id="overview" class="page-section squished-page-section banner-quote">
+      <div class="container">
+        <h1>
+          <span class="fas fa-mobile-alt"></span>
+          <span class="fas fa-tablet-alt"></span>
+          <span class="fas fa-desktop"></span>
+        </h1>
+        <h2>Start your landing page off right</h2>
+        <hr class="title-hr" />
+        <h4>12 column, 5 breakpoint classes for responsive design- no extras</h4>
+        <hr class="title-hr" />
+        <h5>Based on Grid Design, written in LESS, download the precomplied or compiled version.</h5>
+      </div>
+    </section>
+
+    <section id="intro" class="page-section triple-intro">
+      <div class="container">
+        <h5>Small size, full functionality, easy to go.</h5>
+        <h2>The Simple Starting Point</h2>
+        <hr />
+        <div class="row">
+          <div class="box-12-mobile box-tablet-6 box-desktop-4">
+            <div class="container">
+              <div class='neat-img-overlay'>
+                <div></div>
+                <!--Necessary empty div for overlay-->
+                <img src="assets/img/smoke.jpg" />
+              </div>
+              <h3>Rows & Boxes</h3>
+              <p>Responsive, design, and component library.</p>
+            </div>
+          </div>
+          <div class="box-12-mobile box-tablet-6 box-desktop-4">
+            <div class="container">
+              <div class='neat-img-overlay'>
+                <div></div>
+                <!--Necessary empty div for overlay-->
+                <img src="assets/img/network.jpg" />
+              </div>
+              <h3>Breakpoint Views</h3>
+              <p>Verified & Email Alerts when filled out</p>
+            </div>
+          </div>
+          <div class="box-12-mobile box-tablet-12 box-desktop-4">
+            <div class="container">
+              <div class='neat-img-overlay'>
+                <div></div>
+                <!--Necessary empty div for overlay-->
+                <img src="assets/img/drone.jpg" />
+              </div>
+              <h3>Classes & Mixins</h3>
+              <p>Page section with full-view heights and flex-box ease of use-classes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="page-section">
+      <div class="container">
+        <h2>Features</h2>
+        <h4>Row & Box</h4>
+        <p>Place boxes in a row, add up to 12.</p>
+        
+        <h4>Breakpoint Boxes</h4>
+        <p>Use "box-desktop-12 box-mobile-4" to set varying widths across breakpoints</p>
+        
+        <h4>Breakpoint-Hidden and Breakpoint-Only Classes</h4>
+        <p></p>
+      </div>
+    </section>
+
+    <div id="objects" class="page-section">
+      <div class="container">
+        <div class="row">
+          <div class="box-12">
+            <h2>Customization & Objects</h2>
+          </div>
+
+          <div class="box-6">
+            <h3>LESS & CSS Versions</h3>
+            <p>3 Different Styles of Menu Bars- Dark, Transparent, and Colorful</p>
+          </div>
+
+          <div class="box-6">
+            <h3>Easily Customizeable</h3>
+            <p>3 Different Layouts- Completely Centered, Lower Left, and Middle Right</p>
+          </div>
+
+          <div class="box-6">
+            <h3>Includes a Reset</h3>
+            <p>Triple Column Intro, Contact, Portfolios, Quotes, And More</p>
+          </div>
+
+          <div class="box-6">
+            <h3></h3>
+            <p>Profile, Business, and Product</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="download" class="page-section">
+      <div class="container">
+        <div class="row">
+          <div class="box-12 box-desktop-6">
+            <h2>Download & Install</h2>
+            <ol>
+              <li>1. Fork/clone git</li>
+              <li>2. Choose which layout you'd like to use, and rename as index.html</li>
+              <li>3. Arrange Components, Objects & Texts</li>
+              <li>4. Edit styles.less to change colors & fonts</li>
+              <li>5. Compile less files (or set up less-watch)</li>
+              <li>6. Visit!</li>
+            </ol>
+          </div>
+          <div class="box-12 box-desktop-6">
+            <h1><span class="fas fa-download"></span></h1>
+            <a href="#" class="primary-button">Github link</a><br />
+            <a href="#" class="default-button">Checkout My Other Work <span class="fas fa-server"></span></a><br />
+            <a href="#" class="default-button">Hire Me To Design Yours <span class="fas fa-user-tie"></span></a>
+            <h3>Separate JS/Less files for incorporating into your own project coming soon</h3>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div id="footer" class="page-section footer">
+    <div class="container">
+      <h3>Splat <span class="fas fa-tint"></span></h3>
+      <hr />
+      <h6>This page was made by this template.</h6>
+      <ul>
+        <li><a href="http://www.jordan-andrew.com" target="_blank">My Portfolio</a></li>
+        <li><a href="http://github.com/thejhubbs" target="_blank">My Github</a></li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+
+</html>
